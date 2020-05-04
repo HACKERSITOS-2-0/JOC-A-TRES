@@ -1,0 +1,20 @@
+[gd_scene format=2]
+
+[node name="marcador" type="MarginContainer"]
+anchor_right = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = -20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="marcador" type="HBoxContainer" parent="."]
+margin_right = 984.0
+
+[node name="barras" type="VBoxContainer" parent="marcador"]
+
+[node name="contadors" type="HBoxContainer" parent="marcador"]
+margin_left = 4.0
+margin_right = 4.0
