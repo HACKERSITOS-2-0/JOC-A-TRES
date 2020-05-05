@@ -1,20 +1,33 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://barra_vida.tscn" type="PackedScene" id=1]
+[ext_resource path="res://imatges/pause/pause.png" type="Texture" id=2]
 
 [node name="marcador" type="MarginContainer"]
 anchor_right = 1.0
-margin_left = 20.0
-margin_top = 20.0
-margin_right = -20.0
-margin_bottom = -20.0
+anchor_bottom = 1.0
+rect_clip_content = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="marcador" type="HBoxContainer" parent="."]
-margin_right = 984.0
+[node name="barra_vida" parent="." instance=ExtResource( 1 )]
+margin_right = 1024.0
+margin_bottom = 600.0
+custom_constants/margin_top = 525
+custom_constants/margin_left = 300
 
-[node name="barras" type="VBoxContainer" parent="marcador"]
+[node name="pause" type="MarginContainer" parent="."]
+margin_right = 85.0
+margin_bottom = 89.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+custom_constants/margin_top = 15
+custom_constants/margin_left = 15
 
-[node name="contadors" type="HBoxContainer" parent="marcador"]
-margin_left = 4.0
-margin_right = 4.0
+[node name="pause" type="TextureButton" parent="pause"]
+margin_left = 15.0
+margin_top = 15.0
+margin_right = 85.0
+margin_bottom = 89.0
+texture_normal = ExtResource( 2 )

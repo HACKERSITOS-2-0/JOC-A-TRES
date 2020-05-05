@@ -11,14 +11,14 @@ outline_size = 10
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 size = 35
 outline_size = 5
 outline_color = Color( 0, 0, 0, 1 )
 use_filter = true
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=3]
 size = 35
 outline_size = 5
 outline_color = Color( 0, 0, 0, 1 )
@@ -78,7 +78,7 @@ margin_bottom = 203.0
 [node name="continue" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer/VBoxContainer"]
 margin_right = 824.0
 margin_bottom = 44.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.447059, 0.498039, 1, 1 )
 text = "continue"
 flat = true
@@ -88,7 +88,7 @@ margin_top = 48.0
 margin_right = 824.0
 margin_bottom = 92.0
 size_flags_horizontal = 5
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.447059, 0.498039, 1, 1 )
 shortcut_in_tooltip = false
 button_mask = 0
