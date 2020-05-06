@@ -75,7 +75,7 @@ margin_top = 63.0
 margin_right = 824.0
 margin_bottom = 203.0
 
-[node name="continue" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="Continue" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer/VBoxContainer"]
 margin_right = 824.0
 margin_bottom = 44.0
 custom_fonts/font = SubResource( 2 )
@@ -83,7 +83,7 @@ custom_colors/font_color = Color( 0.447059, 0.498039, 1, 1 )
 text = "continue"
 flat = true
 
-[node name="levels" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="Levels" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer/VBoxContainer"]
 margin_top = 48.0
 margin_right = 824.0
 margin_bottom = 92.0
@@ -96,7 +96,7 @@ text = "LEVELS"
 flat = true
 clip_text = true
 
-[node name="Button" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="Quit" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer/VBoxContainer"]
 margin_top = 96.0
 margin_right = 824.0
 margin_bottom = 140.0
