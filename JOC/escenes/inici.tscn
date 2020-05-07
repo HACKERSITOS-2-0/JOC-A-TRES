@@ -1,9 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://fonts/Revamped.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://imatges/fons/fons de inici.jpg" type="Texture" id=2]
 [ext_resource path="res://fonts/Comfortaa-Bold.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://escenes/inici.gd" type="Script" id=4]
+[ext_resource path="res://escenes/menu_levels.tscn" type="PackedScene" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 55
@@ -36,12 +37,13 @@ font_data = ExtResource( 3 )
 
 [node name="inici" type="Node"]
 script = ExtResource( 4 )
+menu_nivells = ExtResource( 5 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="fons" type="Sprite" parent="CanvasLayer"]
 modulate = Color( 0.501961, 0.490196, 0.490196, 1 )
-position = Vector2( 425.797, 363.22 )
+position = Vector2( 425, 365 )
 texture = ExtResource( 2 )
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
@@ -90,11 +92,8 @@ margin_bottom = 92.0
 size_flags_horizontal = 5
 custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.447059, 0.498039, 1, 1 )
-shortcut_in_tooltip = false
-button_mask = 0
 text = "LEVELS"
 flat = true
-clip_text = true
 
 [node name="Quit" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer/VBoxContainer"]
 margin_top = 96.0
@@ -124,5 +123,7 @@ margin_top = 361.0
 margin_right = 824.0
 margin_bottom = 373.0
 custom_fonts/font = SubResource( 5 )
-text = "© 2020 Hackersitos Inc."
+text = "© 2020 Hackersitos Studios"
 align = 1
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/VBoxContainer/Levels" to="." method="_on_Levels_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
