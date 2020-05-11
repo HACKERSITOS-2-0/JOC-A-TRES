@@ -142,4 +142,5 @@ custom_fonts/font = SubResource( 3 )
 text = "Back"
 flat = true
 align = 2
+[connection signal="pressed" from="VBoxContainer/levels/graella/nivells" to="." method="_on_nivells_pressed"]
 [connection signal="pressed" from="VBoxContainer/MarginContainer2/Back" to="." method="_on_Back_pressed"]

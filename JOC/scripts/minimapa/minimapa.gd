@@ -21,7 +21,7 @@ func _ready():
 		graella.add_child(nova_senyal)
 		nova_senyal.show()
 		senyals[item] = nova_senyal
-		
+
 func _process(delta):
 	if !personatge:
 		pass
@@ -35,4 +35,4 @@ func _process(delta):
 		pos_real.x = clamp(pos_real.x, 0, graella.rect_size.x)
 		pos_real.y = clamp(pos_real.y, 0, graella.rect_size.y)
 		senyals[item].position = pos_real
-	
+
