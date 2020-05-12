@@ -43,7 +43,7 @@ menu_nivells = ExtResource( 5 )
 
 [node name="fons" type="Sprite" parent="CanvasLayer"]
 modulate = Color( 0.501961, 0.490196, 0.490196, 1 )
-position = Vector2( 425, 365 )
+position = Vector2( 425, 362 )
 texture = ExtResource( 2 )
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
