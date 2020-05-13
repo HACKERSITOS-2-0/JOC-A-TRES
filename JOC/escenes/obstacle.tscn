@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[node name="obstacle" type="Area2D"]
+
+[node name="c_s_obstacle" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )

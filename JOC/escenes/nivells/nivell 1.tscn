@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://mapa/obstacles.tres" type="TileSet" id=1]
 [ext_resource path="res://imatges/mapa/terrainTiles_retina.png" type="Texture" id=2]
 [ext_resource path="res://escenes/Personatge.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scripts/enemics/tanc.tscn" type="PackedScene" id=4]
+[ext_resource path="res://escenes/obstacle.tscn" type="PackedScene" id=5]
 
 [sub_resource type="TileSet" id=1]
 0/name = "terrainTiles_retina.png 0"
@@ -53,3 +55,17 @@ tile_data = PoolIntArray( 65544, 1073741831, 0, 65547, 1610612744, 0, 65564, 107
 
 [node name="Personatge" parent="." instance=ExtResource( 3 )]
 position = Vector2( 497, 405 )
+rotation = -0.0450099
+
+[node name="tanc" parent="." instance=ExtResource( 4 )]
+position = Vector2( 74.9473, 191.29 )
+rotation = -0.162713
+scale = Vector2( 0.5, 0.5 )
+
+[node name="obstacle" parent="." instance=ExtResource( 5 )]
+position = Vector2( 273.208, 111.133 )
+scale = Vector2( 1.46624, 1.28647 )
+
+[node name="obstacle2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 303.807, 383.848 )
+scale = Vector2( 2.9361, 8.01796 )

@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://scripts/enemics/tancenemic.gd" type="Script" id=1]
+[ext_resource path="res://escenes/enemics/enemics.tscn" type="PackedScene" id=2]
+[ext_resource path="res://imatges/tancs enemics/onlyObjects_retina_rotated.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 36.5645, 32.1341 )
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 258.909
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 74.1687
+
+[node name="tanc" instance=ExtResource( 2 )]
+rotation = -0.0738792
+script = ExtResource( 1 )
+velocitat = 50
+velocitat_rotacio = 1.5
+temporitzador_pistola = 0.5
+salut = 100
+vel_torreta = 2.0
+radi_visio = 300
+radi_xoc = 100
+
+[node name="cos" parent="." index="1"]
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 348, 122, 72, 67 )
+
+[node name="CollisionShape2D" parent="." index="2"]
+shape = SubResource( 1 )
+
+[node name="cano" parent="." index="3"]
+texture = ExtResource( 3 )
+offset = Vector2( 18, 0 )
+region_enabled = true
+region_rect = Rect2( 452, 34, 60, 24 )
+
+[node name="boquilla" parent="cano" index="0"]
+position = Vector2( 55, 0 )
+
+[node name="Visio" type="Area2D" parent="." index="4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Visio" index="0"]
+shape = SubResource( 2 )
+
+[node name="area_xoc" type="Area2D" parent="." index="5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_xoc" index="0"]
+shape = SubResource( 3 )
+[connection signal="body_entered" from="Visio" to="." method="_on_Visio_body_entered"]
+[connection signal="body_exited" from="Visio" to="." method="_on_Visio_body_exited"]
+[connection signal="area_entered" from="area_xoc" to="." method="_on_area_xoc_area_entered"]
+[connection signal="area_exited" from="area_xoc" to="." method="_on_area_xoc_area_exited"]
