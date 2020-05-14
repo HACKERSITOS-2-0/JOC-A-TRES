@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://mapa/obstacles.tres" type="TileSet" id=1]
 [ext_resource path="res://imatges/mapa/terrainTiles_retina.png" type="Texture" id=2]
@@ -36,6 +36,9 @@
 1/shapes = [  ]
 1/z_index = 0
 
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 27.7203, 32.1205 )
+
 [node name="nivell 1" type="Node"]
 
 [node name="mapa" type="Node" parent="."]
@@ -58,14 +61,162 @@ position = Vector2( 497, 405 )
 rotation = -0.0450099
 
 [node name="tanc" parent="." instance=ExtResource( 4 )]
-position = Vector2( 74.9473, 191.29 )
+position = Vector2( 211.108, 53.008 )
 rotation = -0.162713
 scale = Vector2( 0.5, 0.5 )
+collision_mask = 17
+radi_xoc = 80
 
 [node name="obstacle" parent="." instance=ExtResource( 5 )]
-position = Vector2( 273.208, 111.133 )
+position = Vector2( 271.502, 112.839 )
 scale = Vector2( 1.46624, 1.28647 )
+collision_layer = 16
+collision_mask = 0
 
 [node name="obstacle2" parent="." instance=ExtResource( 5 )]
-position = Vector2( 303.807, 383.848 )
-scale = Vector2( 2.9361, 8.01796 )
+position = Vector2( 398.344, 177.114 )
+scale = Vector2( 1.46624, 1.28647 )
+collision_layer = 16
+collision_mask = 0
+
+[node name="obstacle3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 175.943, 176.545 )
+scale = Vector2( 1.46624, 1.28647 )
+collision_layer = 16
+collision_mask = 0
+
+[node name="obstacle4" parent="." instance=ExtResource( 5 )]
+position = Vector2( 303.386, 273.211 )
+scale = Vector2( 1.46624, 1.28647 )
+collision_layer = 16
+collision_mask = 0
+
+[node name="obstacle16" parent="." instance=ExtResource( 5 )]
+position = Vector2( 47.7252, 80.4178 )
+scale = Vector2( 1.46624, 1.28647 )
+collision_layer = 16
+collision_mask = 0
+
+[node name="obstacle17" parent="." instance=ExtResource( 5 )]
+position = Vector2( 46.5277, 237.287 )
+scale = Vector2( 1.46624, 1.28647 )
+collision_layer = 16
+collision_mask = 0
+
+[node name="obstacle18" parent="." instance=ExtResource( 5 )]
+position = Vector2( 141.727, 337.875 )
+scale = Vector2( 1.46624, 1.28647 )
+collision_layer = 16
+collision_mask = 0
+
+[node name="obstacle19" parent="." instance=ExtResource( 5 )]
+position = Vector2( 79.1589, 465.855 )
+scale = Vector2( 1.46624, 1.28647 )
+collision_layer = 16
+collision_mask = 0
+
+[node name="obstacle20" parent="." instance=ExtResource( 5 )]
+position = Vector2( 174.717, 499.983 )
+scale = Vector2( 1.46624, 1.28647 )
+collision_layer = 16
+collision_mask = 0
+
+[node name="obstacle21" parent="." instance=ExtResource( 5 )]
+position = Vector2( 495.521, 465.855 )
+scale = Vector2( 1.46624, 1.28647 )
+collision_layer = 16
+collision_mask = 0
+
+[node name="obstacle22" parent="." instance=ExtResource( 5 )]
+position = Vector2( 337.454, 559.856 )
+scale = Vector2( 1.46624, 1.28647 )
+collision_layer = 16
+collision_mask = 0
+
+[node name="obstacle23" parent="." instance=ExtResource( 5 )]
+position = Vector2( 590.121, 559.258 )
+scale = Vector2( 1.46624, 1.28647 )
+collision_layer = 16
+collision_mask = 0
+
+[node name="obstacle24" parent="." instance=ExtResource( 5 )]
+position = Vector2( 720.646, 465.256 )
+scale = Vector2( 1.46624, 1.28647 )
+collision_layer = 16
+collision_mask = 0
+
+[node name="obstacle25" parent="." instance=ExtResource( 5 )]
+position = Vector2( 751.181, 529.321 )
+scale = Vector2( 1.46624, 1.28647 )
+collision_layer = 16
+collision_mask = 0
+
+[node name="obstacle26" parent="." instance=ExtResource( 5 )]
+position = Vector2( 944.573, 495.193 )
+scale = Vector2( 1.46624, 1.28647 )
+collision_layer = 16
+collision_mask = 0
+
+[node name="obstacle27" parent="." instance=ExtResource( 5 )]
+position = Vector2( 816.024, 367.782 )
+scale = Vector2( 1.46624, 1.28647 )
+collision_layer = 16
+collision_mask = 0
+
+[node name="obstacle28" parent="." instance=ExtResource( 5 )]
+position = Vector2( 944.004, 335.929 )
+scale = Vector2( 1.46624, 1.28647 )
+collision_layer = 16
+collision_mask = 0
+
+[node name="obstacle29" parent="." instance=ExtResource( 5 )]
+position = Vector2( 782.465, 302.939 )
+scale = Vector2( 1.46624, 1.28647 )
+collision_layer = 16
+collision_mask = 0
+
+[node name="obstacle30" parent="." instance=ExtResource( 5 )]
+position = Vector2( 750.044, 176.665 )
+scale = Vector2( 1.46624, 1.28647 )
+collision_layer = 16
+collision_mask = 0
+
+[node name="obstacle31" parent="." instance=ExtResource( 5 )]
+position = Vector2( 915.526, 48.4005 )
+scale = Vector2( 1.46624, 1.28647 )
+collision_layer = 16
+collision_mask = 0
+
+[node name="obstacle11" parent="." instance=ExtResource( 5 )]
+position = Vector2( 368.648, 48.6848 )
+scale = Vector2( 1.46624, 1.28647 )
+collision_layer = 16
+collision_mask = 0
+
+[node name="obstacle12" parent="." instance=ExtResource( 5 )]
+position = Vector2( 271.653, 48.6848 )
+scale = Vector2( 1.46624, 1.28647 )
+collision_layer = 16
+collision_mask = 0
+
+[node name="obstacle13" parent="." instance=ExtResource( 5 )]
+position = Vector2( 559.645, 82.214 )
+scale = Vector2( 1.46624, 1.28647 )
+collision_layer = 16
+collision_mask = 0
+
+[node name="obstacle14" parent="." instance=ExtResource( 5 )]
+position = Vector2( 624.309, 176.216 )
+scale = Vector2( 1.46624, 1.28647 )
+collision_layer = 16
+collision_mask = 0
+
+[node name="obstacle6" type="Area2D" parent="."]
+position = Vector2( 527.093, 335.574 )
+scale = Vector2( 1.46624, 1.28647 )
+collision_layer = 16
+collision_mask = 0
+
+[node name="c_s_obstacle" type="CollisionShape2D" parent="obstacle6"]
+position = Vector2( -20.6822, 0.906647 )
+shape = SubResource( 2 )

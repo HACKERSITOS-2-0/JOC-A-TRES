@@ -15,14 +15,16 @@ radius = 74.1687
 
 [node name="tanc" instance=ExtResource( 2 )]
 rotation = -0.0738792
+collision_layer = 2
+collision_mask = 0
 script = ExtResource( 1 )
-velocitat = 50
+velocitat = 88
 velocitat_rotacio = 1.5
 temporitzador_pistola = 0.5
 salut = 100
 vel_torreta = 2.0
 radi_visio = 300
-radi_xoc = 100
+radi_xoc = 90
 
 [node name="cos" parent="." index="1"]
 texture = ExtResource( 3 )
@@ -42,11 +44,14 @@ region_rect = Rect2( 452, 34, 60, 24 )
 position = Vector2( 55, 0 )
 
 [node name="Visio" type="Area2D" parent="." index="4"]
+collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Visio" index="0"]
 shape = SubResource( 2 )
 
 [node name="area_xoc" type="Area2D" parent="." index="5"]
+collision_layer = 0
+collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_xoc" index="0"]
 shape = SubResource( 3 )

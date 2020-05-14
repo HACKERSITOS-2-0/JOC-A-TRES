@@ -9,16 +9,18 @@ var velocitat=100
 
 # warning-ignore:unused_argument
 func _process(delta):
+	moviment_x = 0
+	moviment_y = 0
 	look_at(get_global_mouse_position())
 	#provisional per provar els nivells i les collisions
 	if Input.is_action_pressed("ui_right"):
-		var moviment_x = 1
+		moviment_x = 1
 	elif Input.is_action_pressed("ui_left"):
-		var moviment_x = -1
+		moviment_x = -1
 	if Input.is_action_pressed("ui_down"):
-		var moviment_y = 1
+		moviment_y = 1
 	elif Input.is_action_pressed("ui_up"):
-		var moviment_y = -1
+		moviment_y = -1
 	var direccio=Vector2(moviment_x, moviment_y).normalized()
 #	set_global_position(Vector2(x, y)+get_global_position())
 	var moviment = move_and_collide(direccio*delta*velocitat)

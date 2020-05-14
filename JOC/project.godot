@@ -50,6 +50,16 @@ enrrera={
  ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="personatge"
+2d_physics/layer_2="tancs"
+2d_physics/layer_3="enemic2"
+2d_physics/layer_4="enemic3"
+2d_physics/layer_5="obstacles"
+2d_physics/layer_6="bales personatge"
+2d_physics/layer_7="bales enemics"
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
