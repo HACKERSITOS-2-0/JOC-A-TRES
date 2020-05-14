@@ -24,7 +24,7 @@ temporitzador_pistola = 0.5
 salut = 100
 vel_torreta = 2.0
 radi_visio = 300
-radi_xoc = 90
+radi_xoc = 85
 
 [node name="cos" parent="." index="1"]
 texture = ExtResource( 3 )
