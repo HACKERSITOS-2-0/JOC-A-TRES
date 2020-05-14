@@ -55,7 +55,10 @@ collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_xoc" index="0"]
 shape = SubResource( 3 )
+
+[node name="Timer" type="Timer" parent="." index="6"]
 [connection signal="body_entered" from="Visio" to="." method="_on_Visio_body_entered"]
 [connection signal="body_exited" from="Visio" to="." method="_on_Visio_body_exited"]
 [connection signal="area_entered" from="area_xoc" to="." method="_on_area_xoc_area_entered"]
 [connection signal="area_exited" from="area_xoc" to="." method="_on_area_xoc_area_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

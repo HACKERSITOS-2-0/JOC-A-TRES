@@ -2,6 +2,7 @@ extends KinematicBody2D
 var moviment_x = 0
 var moviment_y = 0
 var velocitat=100
+var en_moviment:bool = false
 
 #func _process(delta):
 #	var dir_objectiu = get_global_mouse_position()
@@ -9,21 +10,31 @@ var velocitat=100
 
 # warning-ignore:unused_argument
 func _process(delta):
+	en_moviment = false
 	moviment_x = 0
 	moviment_y = 0
 	look_at(get_global_mouse_position())
 	#provisional per provar els nivells i les collisions
 	if Input.is_action_pressed("ui_right"):
 		moviment_x = 1
+		en_moviment = true
 	elif Input.is_action_pressed("ui_left"):
 		moviment_x = -1
+		en_moviment = true
 	if Input.is_action_pressed("ui_down"):
 		moviment_y = 1
+		en_moviment = true
 	elif Input.is_action_pressed("ui_up"):
 		moviment_y = -1
+		en_moviment = true
 	var direccio=Vector2(moviment_x, moviment_y).normalized()
 #	set_global_position(Vector2(x, y)+get_global_position())
 	var moviment = move_and_collide(direccio*delta*velocitat)
+	if en_moviment:
+		$animacions.play('camina')
+	else:
+		$animacions.play('parat')
+		
 #
 
 #extends KinematicBody2D

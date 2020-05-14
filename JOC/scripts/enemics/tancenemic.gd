@@ -5,8 +5,10 @@ export (float) var vel_torreta
 export (int) var radi_visio
 export (int) var radi_xoc
 
+export (PackedScene) var bala_tanc
 
 var vel:bool=true
+var p_disparar:bool = false
 var objectiu = null
 var dins : bool = false
 var obstacle
@@ -16,8 +18,9 @@ var desplacament := Vector2.ZERO
 onready var obj = get_parent().get_node("Personatge")
 
 func _ready():
- $Visio/CollisionShape2D.shape.radius = radi_visio
- $area_xoc/CollisionShape2D.shape.radius = radi_xoc
+	$Visio/CollisionShape2D.shape.radius = radi_visio
+	$area_xoc/CollisionShape2D.shape.radius = radi_xoc
+	$Timer.start()
 
 
 
@@ -41,7 +44,7 @@ func _process(delta):
 		var direccio_actual_cano = Vector2(1, 0).rotated($cano.global_rotation)
 		var direccio_objectiu = (objectiu.global_position - global_position).normalized()
 		$cano.global_rotation = direccio_actual_cano.linear_interpolate(direccio_objectiu, vel_torreta * delta).angle()
-
+		dispara()
 
 func _on_Visio_body_entered(body):
 	if body.name == "Personatge":
@@ -63,5 +66,13 @@ func _on_area_xoc_area_entered(area):
 func _on_area_xoc_area_exited(area):
 	dins = false
 	obstacle = null
-	
 
+func dispara():
+	if p_disparar:
+		var balas = bala_tanc.instance()
+		balas.position = $"cano/boquilla".global_position 
+		get_parent().add_child(balas)
+		p_disparar = false
+
+func _on_Timer_timeout():
+	p_disparar = true

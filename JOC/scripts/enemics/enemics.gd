@@ -3,7 +3,6 @@ extends KinematicBody2D
 signal canvi_salud
 signal mort
 
-export (PackedScene) var bala
 export (int) var velocitat
 export (float) var velocitat_rotacio
 export (float) var temporitzador_pistola
