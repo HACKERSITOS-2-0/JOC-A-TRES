@@ -1,39 +1,44 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://imatges/bales/bala_tanc.png" type="Texture" id=1]
+[ext_resource path="res://imatges/tancs enemics/onlyObjects_retina_rotated.png" type="Texture" id=1]
 [ext_resource path="res://escenes/bales tanc2.gd" type="Script" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
-radius = 2.2144
-height = 14.0042
+radius = 4.06037
+height = 12.4583
 
 [sub_resource type="CapsuleShape2D" id=2]
 radius = 4.51408
-height = 15.8981
+height = 11.3804
 
 [node name="balas" type="KinematicBody2D"]
 script = ExtResource( 3 )
 vel_bales = 300
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1.19361, -0.426288 )
 rotation = 1.5708
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 1.01457, -0.33819 )
-scale = Vector2( 0.075, 0.05 )
+rotation = 3.14159
+scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 584, 244, 36, 16 )
 
 [node name="area_bala" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 17
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_bala"]
+position = Vector2( 1.53464, -0.426288 )
 rotation = 1.5708
 shape = SubResource( 2 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
-position = Vector2( 1.01457, 0.270551 )
-scale = Vector2( 1.06087, 0.364203 )
+position = Vector2( 1.0572, -0.326252 )
+scale = Vector2( 0.911669, 0.423883 )
 [connection signal="area_entered" from="area_bala" to="." method="_on_area_bala_area_entered"]
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
