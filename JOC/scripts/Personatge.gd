@@ -102,5 +102,6 @@ func dispara():
 		p_disparar = false
 		bales -= 1
 	else:
+		pass
 		#que et surti un label i t'informi.
 	
