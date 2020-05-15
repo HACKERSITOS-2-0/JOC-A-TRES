@@ -61,7 +61,31 @@ tile_data = PoolIntArray( 65547, 1610612744, 0, 65564, 1073741831, 0, 131073, 10
 [node name="Límits Mapa" parent="mapa" instance=ExtResource( 7 )]
 
 [node name="tanc" parent="." instance=ExtResource( 4 )]
-position = Vector2( 196.758, 52.9488 )
+position = Vector2( 301.602, 677.573 )
+rotation = -0.162713
+scale = Vector2( 0.5, 0.5 )
+collision_mask = 17
+radi_xoc = 80
+bala_tanc = ExtResource( 6 )
+
+[node name="tanc4" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1729.83, 144.777 )
+rotation = -0.162713
+scale = Vector2( 0.5, 0.5 )
+collision_mask = 17
+radi_xoc = 80
+bala_tanc = ExtResource( 6 )
+
+[node name="tanc2" parent="." instance=ExtResource( 4 )]
+position = Vector2( 158.492, 76.5316 )
+rotation = -0.162713
+scale = Vector2( 0.5, 0.5 )
+collision_mask = 17
+radi_xoc = 80
+bala_tanc = ExtResource( 6 )
+
+[node name="tanc3" parent="." instance=ExtResource( 4 )]
+position = Vector2( -522.148, -408.061 )
 rotation = -0.162713
 scale = Vector2( 0.5, 0.5 )
 collision_mask = 17
@@ -69,7 +93,8 @@ radi_xoc = 80
 bala_tanc = ExtResource( 6 )
 
 [node name="Personatge" parent="." instance=ExtResource( 3 )]
-position = Vector2( 486.346, 309.88 )
+position = Vector2( 476.779, 348.147 )
+collision_mask = 512
 
 [node name="obstacle2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 398.344, 177.114 )

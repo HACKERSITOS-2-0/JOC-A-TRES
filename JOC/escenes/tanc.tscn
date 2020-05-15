@@ -35,6 +35,7 @@ region_enabled = true
 region_rect = Rect2( 348, 122, 72, 67 )
 
 [node name="CollisionShape2D" parent="." index="2"]
+light_mask = 2
 shape = SubResource( 1 )
 
 [node name="cano" parent="." index="3"]

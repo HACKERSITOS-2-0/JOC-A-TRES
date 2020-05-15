@@ -9,25 +9,29 @@ extents = Vector2( 1.88687, 60.384 )
 [node name="Límits Mapa" type="Node2D"]
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
-collision_layer = 65
-collision_mask = 1023
+collision_layer = 512
+collision_mask = 512
 mode = 1
 sleeping = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+light_mask = 512
 position = Vector2( 508.577, -6 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="RigidBody2D"]
+light_mask = 512
 position = Vector2( 506.059, 609.208 )
 shape = SubResource( 1 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="RigidBody2D"]
+light_mask = 512
 position = Vector2( -5.00001, 301.551 )
 scale = Vector2( 5, 5 )
 shape = SubResource( 2 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="RigidBody2D"]
+light_mask = 512
 position = Vector2( 1032.12, 302.104 )
 scale = Vector2( 5, 5 )
 shape = SubResource( 2 )

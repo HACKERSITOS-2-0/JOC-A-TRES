@@ -72,15 +72,16 @@ bala_personatge = ExtResource( 4 )
 collision_mask = 64
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_personatge"]
+light_mask = 513
 shape = SubResource( 1 )
 
 [node name="animacions" type="AnimatedSprite" parent="."]
 frames = SubResource( 11 )
 animation = "camina"
-frame = 3
 playing = true
 
 [node name="collision" type="CollisionShape2D" parent="."]
+light_mask = 513
 position = Vector2( -3.42576, 0.527039 )
 shape = SubResource( 12 )
 
