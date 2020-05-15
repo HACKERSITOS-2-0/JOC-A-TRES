@@ -1,14 +1,20 @@
 extends KinematicBody2D
 var moviment_x = 0
 var moviment_y = 0
-var velocitat=100
+export var velocitat=100
 var en_moviment:bool = false
+export var bales:int = 20
+var p_disparar:bool = false
+
+export (PackedScene) var bala_personatge
 
 #func _process(delta):
 #	var dir_objectiu = get_global_mouse_position()
 #	move_and_collide(dir_objectiu * velocitat * delta)
 
 # warning-ignore:unused_argument
+
+
 func _process(delta):
 	en_moviment = false
 	moviment_x = 0
@@ -34,9 +40,11 @@ func _process(delta):
 		$animacions.play('camina')
 	else:
 		$animacions.play('parat')
-		
-#
 
+func _input(event):
+	if Input.is_action_just_pressed("click"):
+		dispara()
+		
 #extends KinematicBody2D
 #
 #
@@ -78,3 +86,21 @@ func _process(delta):
 ##	position.y = clamp(position.y, 0, size_pantalla.y)
 ##	return position
 
+
+
+func _on_area_personatge_area_entered(area):
+	if area.name == 'area_bala':
+		$Camera2D/CanvasLayer/marcador/barra_vida/HBoxContainer/TextureProgress.value -= 10
+		if $Camera2D/CanvasLayer/marcador/barra_vida/HBoxContainer/TextureProgress.value == 0:
+			get_tree().change_scene("res://escenes/menu_levels.tscn")
+	
+func dispara():
+	if bales > 0:
+		var balas = bala_personatge.instance()
+		balas.position = $"boquilla pistola".global_position 
+		get_parent().add_child(balas)
+		p_disparar = false
+		bales -= 1
+	else:
+		#que et surti un label i t'informi.
+	

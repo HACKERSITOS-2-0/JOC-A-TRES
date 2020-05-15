@@ -37,8 +37,8 @@
 1/shapes = [  ]
 1/z_index = 0
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 27.7203, 32.1205 )
+[sub_resource type="CircleShape2D" id=2]
+radius = 23.5374
 
 [node name="nivell 1" type="Node"]
 
@@ -55,11 +55,7 @@ tile_data = PoolIntArray( 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 
 scale = Vector2( 0.5, 0.5 )
 tile_set = ExtResource( 1 )
 format = 1
-tile_data = PoolIntArray( 65544, 1073741831, 0, 65547, 1610612744, 0, 65564, 1073741831, 0, 131073, 1073741829, 0, 131089, 1073741825, 0, 196616, 1073741829, 0, 327685, 1073741831, 0, 327692, -536870904, 0, 327699, 1073741829, 0, 327703, 1073741831, 0, 458753, 1610612744, 0, 524297, 1073741825, 0, 589838, -536870906, 0, 589839, -536870906, 0, 589840, -536870906, 0, 589848, 1073741832, 0, 655364, 1073741825, 0, 655374, -536870906, 0, 655376, -536870906, 0, 655389, 1073741831, 0, 720910, -536870906, 0, 720912, -536870906, 0, 720921, 1073741825, 0, 917506, 1610612744, 0, 917519, 1610612739, 0, 917526, 1073741831, 0, 983045, 1073741831, 0, 983069, 1073741829, 0, 1048599, 1073741825, 0, 1114122, 1073741825, 0, 1114130, 1610612744, 0 )
-
-[node name="Personatge" parent="." instance=ExtResource( 3 )]
-position = Vector2( 497, 405 )
-rotation = -0.0450099
+tile_data = PoolIntArray( 65547, 1610612744, 0, 65564, 1073741831, 0, 131073, 1073741829, 0, 131089, 1073741825, 0, 327685, 1073741831, 0, 327692, -536870904, 0, 327699, 1073741829, 0, 327703, 1073741831, 0, 458753, 1610612744, 0, 458769, 0, 0, 524297, 1073741825, 0, 524300, 3, 0, 589848, 1073741832, 0, 655364, 1073741825, 0, 655380, 3, 0, 655389, 1073741831, 0, 720910, 1, 0, 720921, 1073741825, 0, 786442, 3, 0, 917506, 1610612744, 0, 917519, 1610612739, 0, 917526, 1073741831, 0, 983045, 1073741831, 0, 983069, 1073741829, 0, 1048599, 1073741825, 0, 1114122, 1073741825, 0, 1114130, 1610612744, 0 )
 
 [node name="tanc" parent="." instance=ExtResource( 4 )]
 position = Vector2( 211.108, 53.008 )
@@ -69,11 +65,8 @@ collision_mask = 17
 radi_xoc = 80
 bala_tanc = ExtResource( 6 )
 
-[node name="obstacle" parent="." instance=ExtResource( 5 )]
-position = Vector2( 271.502, 112.839 )
-scale = Vector2( 1.46624, 1.28647 )
-collision_layer = 16
-collision_mask = 0
+[node name="Personatge" parent="." instance=ExtResource( 3 )]
+position = Vector2( 486.346, 297.922 )
 
 [node name="obstacle2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 398.344, 177.114 )
@@ -195,12 +188,6 @@ scale = Vector2( 1.46624, 1.28647 )
 collision_layer = 16
 collision_mask = 0
 
-[node name="obstacle12" parent="." instance=ExtResource( 5 )]
-position = Vector2( 271.653, 48.6848 )
-scale = Vector2( 1.46624, 1.28647 )
-collision_layer = 16
-collision_mask = 0
-
 [node name="obstacle13" parent="." instance=ExtResource( 5 )]
 position = Vector2( 559.645, 82.214 )
 scale = Vector2( 1.46624, 1.28647 )
@@ -213,15 +200,34 @@ scale = Vector2( 1.46624, 1.28647 )
 collision_layer = 16
 collision_mask = 0
 
-[node name="obstacle6" type="Area2D" parent="."]
-position = Vector2( 527.093, 335.574 )
+[node name="obstacle15" parent="." instance=ExtResource( 5 )]
+position = Vector2( 401.46, 273.712 )
 scale = Vector2( 1.46624, 1.28647 )
 collision_layer = 16
-collision_mask = 64
+collision_mask = 0
 
-[node name="c_s_obstacle" type="CollisionShape2D" parent="obstacle6"]
-position = Vector2( -20.6822, 0.906647 )
-shape = SubResource( 2 )
+[node name="obstacle32" parent="." instance=ExtResource( 5 )]
+position = Vector2( 338.01, 402.934 )
+scale = Vector2( 1.46624, 1.28647 )
+collision_layer = 16
+collision_mask = 0
+
+[node name="obstacle33" parent="." instance=ExtResource( 5 )]
+position = Vector2( 462.589, 367.34 )
+scale = Vector2( 1.46624, 1.28647 )
+collision_layer = 16
+collision_mask = 0
+
+[node name="obstacle34" parent="." instance=ExtResource( 5 )]
+position = Vector2( 656.034, 337.162 )
+scale = Vector2( 1.46624, 1.28647 )
+collision_layer = 16
+collision_mask = 0
 
 [node name="bales" type="Node" parent="."]
-[connection signal="area_entered" from="obstacle6" to="Personatge" method="_on_obstacle6_area_entered"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 575.992, 255.948 )
+shape = SubResource( 2 )

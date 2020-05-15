@@ -13,6 +13,7 @@ var objectiu = null
 var dins : bool = false
 var obstacle
 var desplacament := Vector2.ZERO
+var vides:int = 5
 
 
 onready var obj = get_parent().get_node("Personatge")
@@ -76,3 +77,13 @@ func dispara():
 
 func _on_Timer_timeout():
 	p_disparar = true
+
+
+func _on_area_cos_area_entered(area):
+	if area.name == 'area_bala_p':
+		print(1)
+		vides -= 1
+		if vides <= 0:
+			queue_free()
+			
+	
