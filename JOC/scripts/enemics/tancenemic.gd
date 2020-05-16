@@ -38,6 +38,7 @@ func _process(delta):
 		desplacament /= obstacle.global_position.distance_to(global_position) / 50
 		dir_objectiu += desplacament
 		
+		
 	if en_moviment:
 		move_and_collide(dir_objectiu * velocitat * delta)
 		$cos.global_rotation = direccio_actual.linear_interpolate(dir_objectiu, velocitat_rotacio * delta).angle()
