@@ -101,6 +101,7 @@ func dispara():
 		get_parent().add_child(balas)
 		p_disparar = false
 		bales -= 1
+		$Camera2D/CanvasLayer/MarginContainer/HBoxContainer/MarginContainer/Label.text = str(bales)
 	else:
 		pass
 		#que et surti un label i t'informi.

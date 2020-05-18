@@ -64,7 +64,6 @@ tile_data = PoolIntArray( 65547, 1610612744, 0, 65564, 1073741831, 0, 131073, 10
 position = Vector2( 301.602, 677.573 )
 rotation = -0.162713
 scale = Vector2( 0.5, 0.5 )
-collision_mask = 19
 radi_xoc = 80
 bala_tanc = ExtResource( 6 )
 
@@ -72,7 +71,6 @@ bala_tanc = ExtResource( 6 )
 position = Vector2( 1729.83, 144.777 )
 rotation = -0.162713
 scale = Vector2( 0.5, 0.5 )
-collision_mask = 19
 radi_xoc = 80
 bala_tanc = ExtResource( 6 )
 
@@ -80,7 +78,6 @@ bala_tanc = ExtResource( 6 )
 position = Vector2( 158.492, 76.5316 )
 rotation = -0.162713
 scale = Vector2( 0.5, 0.5 )
-collision_mask = 19
 radi_xoc = 80
 bala_tanc = ExtResource( 6 )
 
@@ -88,7 +85,6 @@ bala_tanc = ExtResource( 6 )
 position = Vector2( -522.148, -408.061 )
 rotation = -0.162713
 scale = Vector2( 0.5, 0.5 )
-collision_mask = 19
 radi_xoc = 80
 bala_tanc = ExtResource( 6 )
 
@@ -99,157 +95,131 @@ collision_mask = 542
 [node name="obstacle2" parent="." instance=ExtResource( 5 )]
 position = Vector2( 398.344, 177.114 )
 scale = Vector2( 1.46624, 1.28647 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="obstacle3" parent="." instance=ExtResource( 5 )]
 position = Vector2( 175.943, 176.545 )
 scale = Vector2( 1.46624, 1.28647 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="obstacle4" parent="." instance=ExtResource( 5 )]
 position = Vector2( 303.386, 273.211 )
 scale = Vector2( 1.46624, 1.28647 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="obstacle16" parent="." instance=ExtResource( 5 )]
 position = Vector2( 47.7252, 80.4178 )
 scale = Vector2( 1.46624, 1.28647 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="obstacle17" parent="." instance=ExtResource( 5 )]
 position = Vector2( 46.5277, 237.287 )
 scale = Vector2( 1.46624, 1.28647 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="obstacle18" parent="." instance=ExtResource( 5 )]
 position = Vector2( 141.727, 337.875 )
 scale = Vector2( 1.46624, 1.28647 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="obstacle19" parent="." instance=ExtResource( 5 )]
 position = Vector2( 79.1589, 465.855 )
 scale = Vector2( 1.46624, 1.28647 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="obstacle20" parent="." instance=ExtResource( 5 )]
 position = Vector2( 174.717, 499.983 )
 scale = Vector2( 1.46624, 1.28647 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="obstacle21" parent="." instance=ExtResource( 5 )]
 position = Vector2( 495.521, 465.855 )
 scale = Vector2( 1.46624, 1.28647 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="obstacle22" parent="." instance=ExtResource( 5 )]
 position = Vector2( 337.454, 559.856 )
 scale = Vector2( 1.46624, 1.28647 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="obstacle23" parent="." instance=ExtResource( 5 )]
 position = Vector2( 590.121, 559.258 )
 scale = Vector2( 1.46624, 1.28647 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="obstacle24" parent="." instance=ExtResource( 5 )]
 position = Vector2( 720.646, 465.256 )
 scale = Vector2( 1.46624, 1.28647 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="obstacle25" parent="." instance=ExtResource( 5 )]
 position = Vector2( 751.181, 529.321 )
 scale = Vector2( 1.46624, 1.28647 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="obstacle26" parent="." instance=ExtResource( 5 )]
 position = Vector2( 944.573, 495.193 )
 scale = Vector2( 1.46624, 1.28647 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="obstacle27" parent="." instance=ExtResource( 5 )]
 position = Vector2( 816.024, 367.782 )
 scale = Vector2( 1.46624, 1.28647 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="obstacle28" parent="." instance=ExtResource( 5 )]
 position = Vector2( 944.004, 335.929 )
 scale = Vector2( 1.46624, 1.28647 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="obstacle29" parent="." instance=ExtResource( 5 )]
 position = Vector2( 782.465, 302.939 )
 scale = Vector2( 1.46624, 1.28647 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="obstacle30" parent="." instance=ExtResource( 5 )]
 position = Vector2( 750.044, 176.665 )
 scale = Vector2( 1.46624, 1.28647 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="obstacle31" parent="." instance=ExtResource( 5 )]
 position = Vector2( 915.526, 48.4005 )
 scale = Vector2( 1.46624, 1.28647 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="obstacle11" parent="." instance=ExtResource( 5 )]
 position = Vector2( 368.648, 48.6848 )
 scale = Vector2( 1.46624, 1.28647 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="obstacle13" parent="." instance=ExtResource( 5 )]
 position = Vector2( 559.645, 82.214 )
 scale = Vector2( 1.46624, 1.28647 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="obstacle14" parent="." instance=ExtResource( 5 )]
 position = Vector2( 624.309, 176.216 )
 scale = Vector2( 1.46624, 1.28647 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="obstacle15" parent="." instance=ExtResource( 5 )]
 position = Vector2( 401.46, 273.712 )
 scale = Vector2( 1.46624, 1.28647 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="obstacle32" parent="." instance=ExtResource( 5 )]
 position = Vector2( 338.01, 402.934 )
 scale = Vector2( 1.46624, 1.28647 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="obstacle33" parent="." instance=ExtResource( 5 )]
 position = Vector2( 462.589, 367.34 )
 scale = Vector2( 1.46624, 1.28647 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="obstacle34" parent="." instance=ExtResource( 5 )]
 position = Vector2( 656.034, 337.162 )
 scale = Vector2( 1.46624, 1.28647 )
-collision_layer = 16
 collision_mask = 0
 
 [node name="bales" type="Node" parent="."]
