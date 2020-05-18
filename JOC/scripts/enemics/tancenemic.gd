@@ -9,11 +9,13 @@ export (PackedScene) var bala_tanc
 
 var en_moviment:bool=true
 var p_disparar:bool = false
+var in_screen : bool = false
 var objectiu = null
 var dins : bool = false
 var obstacle
 var desplacament := Vector2.ZERO
 var vides:int = 5
+var dir_actual_cano:Vector2
 
 
 onready var obj = get_parent().get_node("Personatge")
@@ -27,7 +29,7 @@ func _ready():
 
 
 func _process(delta):
-	var dir_actual_cano = Vector2(1, 0).rotated($cano.global_rotation)
+	dir_actual_cano = Vector2(1, 0).rotated($cano.global_rotation)
 	var direccio_actual = Vector2(1, 0).rotated($cos.global_rotation)
 	var dir_objectiu = (obj.global_position - global_position).normalized()
 #	$cos.global_rotation = direccio_actual.linear_interpolate(dir_objectiu, velocitat_rotacio * delta).angle()
@@ -73,10 +75,12 @@ func _on_area_xoc_area_exited(area):
 
 func dispara():
 	if p_disparar:
-		var balas = bala_tanc.instance()
-		balas.position = $"cano/boquilla".global_position 
-		get_parent().add_child(balas)
-		p_disparar = false
+		if in_screen:
+			var balas = bala_tanc.instance()
+			balas.position = $"cano/boquilla".global_position 
+			balas.dir_objectiu = dir_actual_cano
+			get_parent().add_child(balas)
+			p_disparar = false
 
 func _on_Timer_timeout():
 	p_disparar = true
@@ -90,3 +94,7 @@ func _on_area_cos_area_entered(area):
 			queue_free()
 			
 	
+
+
+func _on_VisibilityNotifier2D_screen_entered():
+	in_screen = true

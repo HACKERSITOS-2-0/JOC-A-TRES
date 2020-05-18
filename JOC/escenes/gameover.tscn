@@ -1,0 +1,82 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://escenes/ganeover.gd" type="Script" id=1]
+[ext_resource path="res://imatges/gameover/DMsC3ZPXkAA5rWI.png" type="Texture" id=2]
+[ext_resource path="res://fonts/Revamped.otf" type="DynamicFontData" id=3]
+[ext_resource path="res://imatges/fons/fons de inici.jpg" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+outline_size = 7
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+outline_size = 7
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 425, 362 )
+texture = ExtResource( 4 )
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+margin_right = 1024.0
+margin_bottom = 600.0
+
+[node name="Sprite" type="Sprite" parent="MarginContainer/MarginContainer"]
+position = Vector2( 512, 200 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 2 )
+
+[node name="MarginContainer2" type="MarginContainer" parent="MarginContainer"]
+margin_right = 1024.0
+margin_bottom = 600.0
+custom_constants/margin_right = 150
+custom_constants/margin_top = 375
+custom_constants/margin_left = 150
+custom_constants/margin_bottom = 150
+
+[node name="retry" type="Button" parent="MarginContainer/MarginContainer2"]
+margin_left = 150.0
+margin_top = 375.0
+margin_right = 874.0
+margin_bottom = 450.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.447059, 0.498039, 1, 1 )
+text = "RETRY"
+flat = true
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/margin_right = 150
+custom_constants/margin_top = 450
+custom_constants/margin_left = 150
+custom_constants/margin_bottom = 100
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="levels" type="Button" parent="MarginContainer2"]
+margin_left = 150.0
+margin_top = 450.0
+margin_right = 874.0
+margin_bottom = 509.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.447059, 0.498039, 1, 1 )
+text = "LEVELS"
+flat = true
+[connection signal="pressed" from="MarginContainer/MarginContainer2/retry" to="." method="_on_retry_pressed"]
+[connection signal="pressed" from="MarginContainer2/levels" to="." method="_on_levels_pressed"]

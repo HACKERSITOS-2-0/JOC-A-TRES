@@ -79,7 +79,6 @@ shape = SubResource( 1 )
 [node name="animacions" type="AnimatedSprite" parent="."]
 frames = SubResource( 11 )
 animation = "camina"
-frame = 2
 playing = true
 
 [node name="collision" type="CollisionShape2D" parent="."]

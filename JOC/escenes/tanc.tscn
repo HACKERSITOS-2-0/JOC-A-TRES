@@ -69,9 +69,12 @@ collision_mask = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_cos" index="0"]
 shape = SubResource( 4 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="8"]
 [connection signal="body_entered" from="Visio" to="." method="_on_Visio_body_entered"]
 [connection signal="body_exited" from="Visio" to="." method="_on_Visio_body_exited"]
 [connection signal="area_entered" from="area_xoc" to="." method="_on_area_xoc_area_entered"]
 [connection signal="area_exited" from="area_xoc" to="." method="_on_area_xoc_area_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
 [connection signal="area_entered" from="area_cos" to="." method="_on_area_cos_area_entered"]
+[connection signal="screen_entered" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_entered"]
