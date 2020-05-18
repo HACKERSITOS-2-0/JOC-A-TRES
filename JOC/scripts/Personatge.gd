@@ -14,6 +14,8 @@ export (PackedScene) var bala_personatge
 
 # warning-ignore:unused_argument
 
+func _ready():
+	$Camera2D/CanvasLayer/MarginContainer/HBoxContainer/MarginContainer/Label.text = str(bales)
 
 func _process(delta):
 	en_moviment = false
@@ -102,6 +104,8 @@ func dispara():
 		p_disparar = false
 		bales -= 1
 		$Camera2D/CanvasLayer/MarginContainer/HBoxContainer/MarginContainer/Label.text = str(bales)
+		if bales == 0:
+			$Camera2D/CanvasLayer/MarginContainer/HBoxContainer/MarginContainer/Label.modulate = Color.red
 	else:
 		pass
 		#que et surti un label i t'informi.
