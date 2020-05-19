@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scripts/enemics/tancenemic.gd" type="Script" id=1]
 [ext_resource path="res://escenes/enemics/enemics.tscn" type="PackedScene" id=2]
 [ext_resource path="res://imatges/tancs enemics/onlyObjects_retina_rotated.png" type="Texture" id=3]
+[ext_resource path="res://escenes/bales tanc.tscn" type="PackedScene" id=4]
+[ext_resource path="res://escenes/caixes de bales.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 36.5645, 32.1341 )
@@ -17,6 +19,7 @@ radius = 74.1687
 extents = Vector2( 41.3636, 37.3783 )
 
 [node name="tanc" instance=ExtResource( 2 )]
+scale = Vector2( 0.8, 0.8 )
 collision_layer = 2
 collision_mask = 19
 script = ExtResource( 1 )
@@ -27,6 +30,8 @@ salut = 100
 vel_torreta = 2.0
 radi_visio = 300
 radi_xoc = 85
+bala_tanc = ExtResource( 4 )
+caixa_bales = ExtResource( 5 )
 
 [node name="cos" parent="." index="1"]
 texture = ExtResource( 3 )

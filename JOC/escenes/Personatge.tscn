@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://escenes/marcador.tscn" type="PackedScene" id=1]
 [ext_resource path="res://imatges/personatges/Spaceship Game - Sprites by 7Soul1 on DeviantArt (1).png" type="Texture" id=2]
@@ -63,9 +63,12 @@ animations = [ {
 radius = 15.0842
 height = 4.01923
 
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 18.9608, 15.0578 )
+
 [node name="Personatge" type="KinematicBody2D"]
 position = Vector2( -1, 0 )
-collision_mask = 0
+collision_mask = 128
 script = ExtResource( 3 )
 bala_personatge = ExtResource( 4 )
 
@@ -79,6 +82,7 @@ shape = SubResource( 1 )
 [node name="animacions" type="AnimatedSprite" parent="."]
 frames = SubResource( 11 )
 animation = "camina"
+frame = 4
 playing = true
 
 [node name="collision" type="CollisionShape2D" parent="."]
@@ -107,4 +111,13 @@ margin_bottom = 888.0
 
 [node name="boquilla pistola" type="Position2D" parent="."]
 position = Vector2( 17.1678, 7.34264 )
+
+[node name="caixes detector" type="Area2D" parent="."]
+space_override = 1
+collision_layer = 128
+collision_mask = 128
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="caixes detector"]
+shape = SubResource( 13 )
 [connection signal="area_entered" from="area_personatge" to="." method="_on_area_personatge_area_entered"]
+[connection signal="area_entered" from="caixes detector" to="." method="_on_caixes_detector_area_entered"]

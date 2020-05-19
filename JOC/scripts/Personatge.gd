@@ -110,3 +110,10 @@ func dispara():
 		pass
 		#que et surti un label i t'informi.
 	
+
+
+
+
+func _on_caixes_detector_area_entered(area):
+	bales += 8
+	area.queue_free()

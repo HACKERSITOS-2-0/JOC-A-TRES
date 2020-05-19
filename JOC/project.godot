@@ -64,6 +64,7 @@ click={
 2d_physics/layer_5="obstacles"
 2d_physics/layer_6="bales personatge"
 2d_physics/layer_7="bales enemics"
+2d_physics/layer_8="caixa bales"
 
 [rendering]
 

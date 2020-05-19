@@ -1,12 +1,13 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://mapa/obstacles.tres" type="TileSet" id=1]
 [ext_resource path="res://imatges/mapa/terrainTiles_retina.png" type="Texture" id=2]
 [ext_resource path="res://escenes/Personatge.tscn" type="PackedScene" id=3]
-[ext_resource path="res://escenes/tanc.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scripts/nivells/nivell 1.gd" type="Script" id=4]
 [ext_resource path="res://escenes/obstacle.tscn" type="PackedScene" id=5]
-[ext_resource path="res://escenes/bales tanc.tscn" type="PackedScene" id=6]
+[ext_resource path="res://escenes/respawns.tscn" type="PackedScene" id=6]
 [ext_resource path="res://escenes/nivells/Límits Mapa.tscn" type="PackedScene" id=7]
+[ext_resource path="res://escenes/tanc.tscn" type="PackedScene" id=8]
 
 [sub_resource type="TileSet" id=1]
 0/name = "terrainTiles_retina.png 0"
@@ -42,6 +43,8 @@
 radius = 23.5374
 
 [node name="nivell 1" type="Node"]
+script = ExtResource( 4 )
+tancs = ExtResource( 8 )
 
 [node name="mapa" type="Node" parent="."]
 
@@ -59,34 +62,6 @@ format = 1
 tile_data = PoolIntArray( 65547, 1610612744, 0, 65564, 1073741831, 0, 131073, 1073741829, 0, 131089, 1073741825, 0, 327685, 1073741831, 0, 327692, -536870904, 0, 327699, 1073741829, 0, 327703, 1073741831, 0, 458753, 1610612744, 0, 458769, 0, 0, 524297, 1073741825, 0, 524300, 3, 0, 589848, 1073741832, 0, 655364, 1073741825, 0, 655380, 3, 0, 655389, 1073741831, 0, 720910, 1, 0, 720921, 1073741825, 0, 786442, 3, 0, 917506, 1610612744, 0, 917519, 1610612739, 0, 917526, 1073741831, 0, 983045, 1073741831, 0, 983069, 1073741829, 0, 1048599, 1073741825, 0, 1114122, 1073741825, 0, 1114130, 1610612744, 0 )
 
 [node name="Límits Mapa" parent="mapa" instance=ExtResource( 7 )]
-
-[node name="tanc" parent="." instance=ExtResource( 4 )]
-position = Vector2( 301.602, 677.573 )
-rotation = -0.162713
-scale = Vector2( 0.5, 0.5 )
-radi_xoc = 80
-bala_tanc = ExtResource( 6 )
-
-[node name="tanc4" parent="." instance=ExtResource( 4 )]
-position = Vector2( 1729.83, 144.777 )
-rotation = -0.162713
-scale = Vector2( 0.5, 0.5 )
-radi_xoc = 80
-bala_tanc = ExtResource( 6 )
-
-[node name="tanc2" parent="." instance=ExtResource( 4 )]
-position = Vector2( 158.492, 76.5316 )
-rotation = -0.162713
-scale = Vector2( 0.5, 0.5 )
-radi_xoc = 80
-bala_tanc = ExtResource( 6 )
-
-[node name="tanc3" parent="." instance=ExtResource( 4 )]
-position = Vector2( -522.148, -408.061 )
-rotation = -0.162713
-scale = Vector2( 0.5, 0.5 )
-radi_xoc = 80
-bala_tanc = ExtResource( 6 )
 
 [node name="Personatge" parent="." instance=ExtResource( 3 )]
 position = Vector2( 476.779, 348.147 )
@@ -229,3 +204,10 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 575.992, 255.948 )
 shape = SubResource( 2 )
+
+[node name="respawns" parent="." instance=ExtResource( 6 )]
+
+[node name="Timer" type="Timer" parent="respawns"]
+wait_time = 5.0
+autostart = true
+[connection signal="timeout" from="respawns/Timer" to="." method="_on_Timer_timeout"]

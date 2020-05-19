@@ -1,0 +1,45 @@
+[gd_scene format=2]
+
+[node name="respawns" type="Node"]
+
+[node name="respawn" type="Position2D" parent="."]
+position = Vector2( 1134.06, -148.646 )
+
+[node name="respawn2" type="Position2D" parent="."]
+position = Vector2( 172.029, 796.678 )
+
+[node name="respawn3" type="Position2D" parent="."]
+position = Vector2( 481.013, 803.359 )
+
+[node name="respawn4" type="Position2D" parent="."]
+position = Vector2( 850.124, 808.369 )
+
+[node name="respawn5" type="Position2D" parent="."]
+position = Vector2( 1187.81, 756.787 )
+
+[node name="respawn6" type="Position2D" parent="."]
+position = Vector2( 1267.98, 43.6187 )
+
+[node name="respawn7" type="Position2D" parent="."]
+position = Vector2( 1291.36, 322.539 )
+
+[node name="respawn8" type="Position2D" parent="."]
+position = Vector2( 1281.34, 537.993 )
+
+[node name="respawn9" type="Position2D" parent="."]
+position = Vector2( -198.44, -14.8378 )
+
+[node name="respawn10" type="Position2D" parent="."]
+position = Vector2( 22.0239, -190.207 )
+
+[node name="respawn11" type="Position2D" parent="."]
+position = Vector2( 416.188, -248.664 )
+
+[node name="respawn12" type="Position2D" parent="."]
+position = Vector2( 813.691, -230.292 )
+
+[node name="respawn13" type="Position2D" parent="."]
+position = Vector2( -223.493, 581.418 )
+
+[node name="respawn14" type="Position2D" parent="."]
+position = Vector2( -248.546, 198.946 )

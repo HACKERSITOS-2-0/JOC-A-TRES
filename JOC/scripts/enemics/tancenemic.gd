@@ -6,6 +6,7 @@ export (int) var radi_visio
 export (int) var radi_xoc
 
 export (PackedScene) var bala_tanc
+export (PackedScene) var caixa_bales
 
 var en_moviment:bool=true
 var p_disparar:bool = false
@@ -91,6 +92,9 @@ func _on_area_cos_area_entered(area):
 		print(1)
 		vides -= 1
 		if vides <= 0:
+			var caixa = caixa_bales.instance()
+			caixa.position = global_position
+			get_parent().add_child(caixa)
 			queue_free()
 			
 	
