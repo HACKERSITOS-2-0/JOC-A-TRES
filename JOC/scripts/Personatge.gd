@@ -3,7 +3,7 @@ var moviment_x = 0
 var moviment_y = 0
 export var velocitat=100
 var en_moviment:bool = false
-export var bales:int = 20
+export var bales:int = 20 setget set_bales
 var p_disparar:bool = false
 
 export (PackedScene) var bala_personatge
@@ -111,9 +111,17 @@ func dispara():
 		#que et surti un label i t'informi.
 	
 
+	
 
-
+func set_bales(n_bales):
+	bales = n_bales
+	actualitza_m (n_bales)
 
 func _on_caixes_detector_area_entered(area):
-	bales += 8
+	self.bales += 8
 	area.queue_free()
+
+func actualitza_m(bales):
+	$Camera2D/CanvasLayer/MarginContainer/HBoxContainer/MarginContainer/Label.text = str(bales)
+	if bales == 0:
+		$Camera2D/CanvasLayer/MarginContainer/HBoxContainer/MarginContainer/Label.modulate = Color.red
