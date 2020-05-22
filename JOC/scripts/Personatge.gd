@@ -36,7 +36,7 @@ func _process(delta):
 		moviment_y = -1
 		en_moviment = true
 	var direccio=Vector2(moviment_x, moviment_y).normalized()
-#	set_global_position(Vector2(x, y)+get_global_position())
+
 	var moviment = move_and_collide(direccio*delta*velocitat)
 	if en_moviment:
 		$animacions.play('camina')
@@ -46,49 +46,6 @@ func _process(delta):
 func _input(event):
 	if Input.is_action_just_pressed("click"):
 		dispara()
-		
-#extends KinematicBody2D
-#
-#
-#
-#export (int) var speed
-#var velocidad = Vector2()
-#var size_pantalla
-#
-#
-#func _ready():
-#	hide()
-#	size_pantalla = get_viewport_rect().size
-#
-#func _process(delta):
-#	var moviment = mou(delta)
-#
-#
-#func mou(delta):
-#	velocidad = Vector2()
-#	if Input.is_action_pressed("dreta"):
-#		velocidad.x += 1
-#
-#	if Input.is_action_pressed("esquerra"):
-#		velocidad.x -= 1
-#
-#	if Input.is_action_pressed("enrrera"):
-#		velocidad.y += 1
-#
-#	if Input.is_action_pressed("endavant"):
-#
-#		velocidad.y -= 1
-#
-#
-#	velocidad = velocidad.normalized() * speed
-#	position += velocidad * delta
-#	move_and_collide(velocidad*delta)
-##	return position
-##	position.x = clamp(position.x, 0, size_pantalla.x)
-##	position.y = clamp(position.y, 0, size_pantalla.y)
-##	return position
-
-
 
 func _on_area_personatge_area_entered(area):
 	if area.name == 'area_bala':

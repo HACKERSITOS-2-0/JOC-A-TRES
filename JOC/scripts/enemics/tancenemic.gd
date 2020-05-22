@@ -1,5 +1,6 @@
 extends "res://scripts/enemics/enemics.gd"
 
+signal disparar
 
 export (float) var vel_torreta
 export (int) var radi_visio
@@ -76,6 +77,12 @@ func _on_area_xoc_area_exited(area):
 
 func dispara():
 	if p_disparar:
+#		p_disparar = false
+#		$Timer.start()
+#		var dir = Vector2(1,0).rotated($cano.global_rotation)
+#		emit_signal('dispara', bala_tanc, $cano/boquilla.global_position, dir)
+
+
 		if in_screen:
 			var balas = bala_tanc.instance()
 			balas.position = $"cano/boquilla".global_position 
