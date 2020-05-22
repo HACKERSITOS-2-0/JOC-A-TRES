@@ -4,7 +4,8 @@ export (int) var velocitat
 export (int) var mal
 export (float) var temps
 
-var moviment = Vector2()
+var moviment = Vector2.ZERO
+
 
 func start(_position, _direction): 
 	position = _position
@@ -20,8 +21,6 @@ func explota():
 
 func _on_Bala_body_entered(body):
 	explota()
-	
-
 
 func _on_Temps_timeout():
 	explota()

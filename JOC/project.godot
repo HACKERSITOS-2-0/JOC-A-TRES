@@ -27,10 +27,6 @@ GlobalVariables="*res://GLOBAL_V.gd"
 window/stretch/mode="2d"
 window/stretch/aspect="keep"
 
-[global]
-
-Layer=false
-
 [input]
 
 dreta={
