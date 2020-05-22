@@ -125,5 +125,6 @@ margin_bottom = 373.0
 custom_fonts/font = SubResource( 5 )
 text = "© 2020 Hackersitos Studios"
 align = 1
+[connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/VBoxContainer/Continue" to="." method="_on_Continue_pressed"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/VBoxContainer/Levels" to="." method="_on_Levels_pressed"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
