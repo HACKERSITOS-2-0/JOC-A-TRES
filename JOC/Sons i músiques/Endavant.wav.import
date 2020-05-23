@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Endavant.wav-6add4c92bf0dcb6923bcb77b664065ea.sample"
+
+[deps]
+
+source_file="res://Sons i músiques/Endavant.wav"
+dest_files=[ "res://.import/Endavant.wav-6add4c92bf0dcb6923bcb77b664065ea.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

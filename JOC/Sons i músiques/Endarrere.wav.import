@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Endarrere.wav-32dc0f85a609ab79f5cb96c574bb1856.sample"
+
+[deps]
+
+source_file="res://Sons i músiques/Endarrere.wav"
+dest_files=[ "res://.import/Endarrere.wav-32dc0f85a609ab79f5cb96c574bb1856.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

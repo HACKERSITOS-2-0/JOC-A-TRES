@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://escenes/nivells.tscn" type="PackedScene" id=1]
 [ext_resource path="res://fonts/Revamped.otf" type="DynamicFontData" id=2]
 [ext_resource path="res://imatges/fons/fons de inici.jpg" type="Texture" id=3]
+[ext_resource path="res://Sons i músiques/Menús.wav" type="AudioStream" id=4]
 [ext_resource path="res://scripts/menu_levels.gd" type="Script" id=5]
 
 [sub_resource type="DynamicFont" id=1]
@@ -142,5 +143,9 @@ custom_fonts/font = SubResource( 3 )
 text = "Back"
 flat = true
 align = 2
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
 [connection signal="pressed" from="VBoxContainer/levels/graella/nivells" to="." method="_on_nivells_pressed"]
 [connection signal="pressed" from="VBoxContainer/MarginContainer2/Back" to="." method="_on_Back_pressed"]

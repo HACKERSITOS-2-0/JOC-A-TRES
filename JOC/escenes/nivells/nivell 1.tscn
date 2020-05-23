@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://mapa/obstacles.tres" type="TileSet" id=1]
 [ext_resource path="res://imatges/mapa/terrainTiles_retina.png" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://escenes/respawns.tscn" type="PackedScene" id=6]
 [ext_resource path="res://escenes/nivells/Límits Mapa.tscn" type="PackedScene" id=7]
 [ext_resource path="res://escenes/tanc.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Sons i músiques/TemaNivells.wav" type="AudioStream" id=9]
 
 [sub_resource type="TileSet" id=1]
 0/name = "terrainTiles_retina.png 0"
@@ -210,4 +211,8 @@ shape = SubResource( 2 )
 [node name="Timer" type="Timer" parent="respawns"]
 wait_time = 5.0
 autostart = true
+
+[node name="TemaNivells" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+autoplay = true
 [connection signal="timeout" from="respawns/Timer" to="." method="_on_Timer_timeout"]
