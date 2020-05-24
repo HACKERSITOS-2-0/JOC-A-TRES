@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://fonts/Comfortaa-Bold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://imatges/botons/grey_button02.png" type="Texture" id=2]
 [ext_resource path="res://imatges/botons/grey_button01.png" type="Texture" id=3]
 [ext_resource path="res://scripts/nivells.gd" type="Script" id=4]
+[ext_resource path="res://imatges/estrelles/cf4ce046e6c36febdf54eaf5b41ffa1f-icono-de-golpe-de-estrella-38-by-vexels.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=1]
 size = 30
@@ -32,3 +33,21 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="estrella1" type="Sprite" parent="."]
+visible = false
+position = Vector2( 89.6253, 23.1996 )
+scale = Vector2( 0.117568, 0.119864 )
+texture = ExtResource( 5 )
+
+[node name="estrella2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 151.397, 22.5494 )
+scale = Vector2( 0.117568, 0.119864 )
+texture = ExtResource( 5 )
+
+[node name="estrella3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 34.3555, 22.8745 )
+scale = Vector2( 0.117568, 0.119864 )
+texture = ExtResource( 5 )

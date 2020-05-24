@@ -1,5 +1,22 @@
 extends CanvasLayer
 
+onready var g_variables = get_node('..').get_node('GlobalVariables')
+
+
+func _ready():
+	var nivell1 = g_variables.nivell_1
+	if nivell1 == 100:
+		$VBoxContainer/levels/graella/nivells1/estrella1.visible = true
+		$VBoxContainer/levels/graella/nivells1/estrella2.visible = true
+		$VBoxContainer/levels/graella/nivells1/estrella3.visible = true
+	elif nivell1 > 60:
+		$VBoxContainer/levels/graella/nivells1/estrella1.visible = true
+		$VBoxContainer/levels/graella/nivells1/estrella2.visible = true
+		$VBoxContainer/levels/graella/nivells1/estrella3.visible = false
+	elif nivell1 > 5:
+		$VBoxContainer/levels/graella/nivells1/estrella1.visible = true
+		$VBoxContainer/levels/graella/nivells1/estrella2.visible = false
+		$VBoxContainer/levels/graella/nivells1/estrella3.visible = false
 
 func _on_Back_pressed():
 	var player = AudioStreamPlayer.new()

@@ -26,9 +26,11 @@ func canvia_nivell(current_level):
 	guarda_current_lvl(current_level)
 
 func canvia_nivell_1(nivell1):
+	nivell_1 = nivell1
 	guarda_record_1(nivell1)
 
 func canvia_nivell_2(nivell2):
+	nivell_2 = nivell2
 	guarda_record_2(nivell2)
 
 func canvia_nivell_3(nivell3):
@@ -54,7 +56,7 @@ func carrega_record_1():
 	if f.file_exists(document_punts_1):
 		f.open(document_punts_1, File.READ)
 		var content = f.get_as_text()
-		var highscore_1 = int(content)
+		nivell_1 = int(content)
 		f.close()
 
 func guarda_record_1(highscore):

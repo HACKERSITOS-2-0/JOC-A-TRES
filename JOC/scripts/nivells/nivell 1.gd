@@ -1,5 +1,7 @@
 extends Node
 
+onready var g_variables = get_node('..').get_node('GlobalVariables')
+
 export (PackedScene) var tancs
 var respawn_n:int 
 
@@ -37,3 +39,9 @@ func _on_Timer_timeout():
 		tanc_copia.position = $respawns/respawn14.position
 
 	add_child(tanc_copia)
+
+
+func _on_temps_de_nivell_timeout():
+	g_variables.nivell_1 = $Personatge/Camera2D/CanvasLayer/marcador/barra_vida/HBoxContainer/TextureProgress.value
+	get_tree().change_scene("res://escenes/menu_levels.tscn")
+	

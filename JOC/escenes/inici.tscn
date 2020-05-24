@@ -1,11 +1,10 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://fonts/Revamped.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://imatges/fons/fons de inici.jpg" type="Texture" id=2]
 [ext_resource path="res://fonts/Comfortaa-Bold.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://scripts/inici.gd" type="Script" id=4]
 [ext_resource path="res://escenes/menu_levels.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Sons i músiques/Menús.wav" type="AudioStream" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 55
@@ -126,10 +125,6 @@ margin_bottom = 373.0
 custom_fonts/font = SubResource( 5 )
 text = "© 2020 Hackersitos Studios"
 align = 1
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 6 )
-autoplay = true
 [connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/VBoxContainer/Continue" to="." method="_on_Continue_pressed"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/VBoxContainer/Levels" to="." method="_on_Levels_pressed"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
