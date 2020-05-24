@@ -30,3 +30,5 @@ func _on_Quit_pressed():
 func _on_Continue_pressed():
 	if g_variables.current_lvl == 1:
 		get_tree().change_scene("res://escenes/nivells/nivell 1.tscn")
+	elif g_variables.current_lvl == 2:
+		get_tree().change_scene("res://escenes/nivells/nivell 2.tscn")

@@ -59,6 +59,7 @@ polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 points = PoolVector2Array( 18.5232, 13.8285, 49.2222, 18.5729, 44.1987, 49.83, 15.1742, 45.0856 )
 
 [resource]
+resource_local_to_scene = true
 0/name = "arbre_verd_g"
 0/texture = ExtResource( 1 )
 0/tex_offset = Vector2( 0, 0 )

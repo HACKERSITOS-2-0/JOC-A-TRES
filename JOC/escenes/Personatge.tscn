@@ -67,7 +67,8 @@ height = 4.01923
 extents = Vector2( 18.9608, 15.0578 )
 
 [node name="Personatge" type="KinematicBody2D"]
-position = Vector2( -1, 0 )
+position = Vector2( -1, 1 )
+collision_layer = 513
 collision_mask = 128
 script = ExtResource( 3 )
 bala_personatge = ExtResource( 4 )
@@ -82,7 +83,7 @@ shape = SubResource( 1 )
 [node name="animacions" type="AnimatedSprite" parent="."]
 frames = SubResource( 11 )
 animation = "camina"
-frame = 6
+frame = 4
 playing = true
 
 [node name="collision" type="CollisionShape2D" parent="."]

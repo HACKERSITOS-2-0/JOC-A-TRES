@@ -5,6 +5,8 @@ onready var g_variables = get_node('..').get_node('GlobalVariables')
 export (PackedScene) var tancs
 var respawn_n:int 
 
+func _ready():
+	g_variables.current_lvl = 1
 
 func _on_Timer_timeout():
 	var tanc_copia = tancs.instance()

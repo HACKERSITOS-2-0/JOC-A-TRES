@@ -148,4 +148,5 @@ align = 2
 stream = ExtResource( 4 )
 autoplay = true
 [connection signal="pressed" from="VBoxContainer/levels/graella/nivells1" to="." method="_on_nivells_pressed"]
+[connection signal="pressed" from="VBoxContainer/levels/graella/nivells2" to="." method="_on_nivells2_pressed"]
 [connection signal="pressed" from="VBoxContainer/MarginContainer2/Back" to="." method="_on_Back_pressed"]
