@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/IMG-8869-removebg-preview.png-fc6aa7b3b65fe7eeafd7657c08a96730.stex"
+path="res://.import/Red_laser-ConvertImage_votu8o.png-c74a77bbb4a3e7dca59adaf4bd19f871.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imatges/personatges/IMG-8869-removebg-preview.png"
-dest_files=[ "res://.import/IMG-8869-removebg-preview.png-fc6aa7b3b65fe7eeafd7657c08a96730.stex" ]
+source_file="res://imatges/bales/Red_laser-ConvertImage_votu8o.png"
+dest_files=[ "res://.import/Red_laser-ConvertImage_votu8o.png-c74a77bbb4a3e7dca59adaf4bd19f871.stex" ]
 
 [params]
 

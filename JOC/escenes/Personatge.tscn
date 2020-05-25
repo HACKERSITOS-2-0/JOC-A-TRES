@@ -1,40 +1,40 @@
 [gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://escenes/marcador.tscn" type="PackedScene" id=1]
+[ext_resource path="res://imatges/personatges/IMG-8878.PNG" type="Texture" id=2]
 [ext_resource path="res://scripts/Personatge.gd" type="Script" id=3]
 [ext_resource path="res://escenes/bala_personatge.tscn" type="PackedScene" id=4]
 [ext_resource path="res://escenes/marcador_bales.tscn" type="PackedScene" id=5]
-[ext_resource path="res://imatges/personatges/IMG-8867-removebg-preview.png" type="Texture" id=6]
-[ext_resource path="res://imatges/personatges/IMG-8869-removebg-preview.png" type="Texture" id=7]
-[ext_resource path="res://imatges/personatges/IMG-8870-removebg-preview.png" type="Texture" id=8]
-[ext_resource path="res://imatges/personatges/IMG-8866-removebg-preview.png" type="Texture" id=9]
-[ext_resource path="res://imatges/personatges/IMG-8870-removebg-preview - copia.png" type="Texture" id=10]
-[ext_resource path="res://imatges/personatges/2.png" type="Texture" id=11]
-[ext_resource path="res://imatges/personatges/IMG-8865-removebg-preview.png" type="Texture" id=12]
-[ext_resource path="res://imatges/personatges/IMG-8864-removebg-preview.png" type="Texture" id=13]
+[ext_resource path="res://imatges/personatges/IMG-8879.PNG" type="Texture" id=6]
+[ext_resource path="res://imatges/personatges/IMG-8875.PNG" type="Texture" id=7]
+[ext_resource path="res://imatges/personatges/IMG-8873.PNG" type="Texture" id=8]
+[ext_resource path="res://imatges/personatges/IMG-8877.PNG" type="Texture" id=9]
+[ext_resource path="res://imatges/personatges/IMG-8874.PNG" type="Texture" id=10]
+[ext_resource path="res://imatges/personatges/IMG-8876.PNG" type="Texture" id=11]
+[ext_resource path="res://imatges/personatges/IMG-8872.PNG" type="Texture" id=12]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 19.1923
 height = 0.276672
 
-[sub_resource type="SpriteFrames" id=3]
+[sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 6 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 9 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 7 ), ExtResource( 8 ) ],
+"frames": [ ExtResource( 12 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 9 ), ExtResource( 2 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "camina",
 "speed": 8.0
 }, {
-"frames": [ ExtResource( 11 ) ],
+"frames": [ ExtResource( 7 ) ],
 "loop": true,
 "name": "parat",
 "speed": 8.0
 } ]
 
-[sub_resource type="CapsuleShape2D" id=4]
+[sub_resource type="CapsuleShape2D" id=3]
 radius = 15.0842
 height = 4.01923
 
-[sub_resource type="RectangleShape2D" id=5]
+[sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 19.7813, 15.0578 )
 
 [node name="Personatge" type="KinematicBody2D"]
@@ -54,16 +54,16 @@ shape = SubResource( 1 )
 [node name="animacions" type="AnimatedSprite" parent="."]
 position = Vector2( -5.94397, 1.08072 )
 rotation = -1.5708
-scale = Vector2( 0.25, 0.25 )
-frames = SubResource( 3 )
+scale = Vector2( 0.05, 0.05 )
+frames = SubResource( 2 )
 animation = "camina"
-frame = 7
+frame = 3
 playing = true
 
 [node name="collision" type="CollisionShape2D" parent="."]
 light_mask = 513
 position = Vector2( -3.42576, 0.527039 )
-shape = SubResource( 4 )
+shape = SubResource( 3 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
@@ -85,7 +85,7 @@ margin_right = 1351.0
 margin_bottom = 888.0
 
 [node name="boquilla pistola" type="Position2D" parent="."]
-position = Vector2( 32.8383, -15.8929 )
+position = Vector2( 27.7421, -12.6499 )
 
 [node name="caixes detector" type="Area2D" parent="."]
 space_override = 1
@@ -94,6 +94,6 @@ collision_mask = 128
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="caixes detector"]
 position = Vector2( 0.540363, 0.540359 )
-shape = SubResource( 5 )
+shape = SubResource( 4 )
 [connection signal="area_entered" from="area_personatge" to="." method="_on_area_personatge_area_entered"]
 [connection signal="area_entered" from="caixes detector" to="." method="_on_caixes_detector_area_entered"]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/IMG-8866-removebg-preview.png-cd5371cafffda61b3499975f2aae25ed.stex"
+path="res://.import/IMG-8875.PNG-28ed0d13277c88b320b1cb56a571e0d2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imatges/personatges/IMG-8866-removebg-preview.png"
-dest_files=[ "res://.import/IMG-8866-removebg-preview.png-cd5371cafffda61b3499975f2aae25ed.stex" ]
+source_file="res://imatges/personatges/IMG-8875.PNG"
+dest_files=[ "res://.import/IMG-8875.PNG-28ed0d13277c88b320b1cb56a571e0d2.stex" ]
 
 [params]
 
@@ -20,7 +20,7 @@ compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
-flags/filter=true
+flags/filter=false
 flags/mipmaps=false
 flags/anisotropic=false
 flags/srgb=2
