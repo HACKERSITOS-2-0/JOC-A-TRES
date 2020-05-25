@@ -3,6 +3,7 @@ extends Node
 var health=100
 
 var current_lvl = 1 setget canvia_nivell
+var max_lvl = 0 setget canvia_max_lvl
 var nivell_1 = 0 setget canvia_nivell_1
 var nivell_2 = 0 setget canvia_nivell_2
 var nivell_3 = 0 setget canvia_nivell_3
@@ -14,6 +15,7 @@ var nivell_8 = 0 setget canvia_nivell_8
 var nivell_9 = 0 setget canvia_nivell_9
 
 var document_current_lvl = "user://current_lvl.txt"
+var document_max_lvl = "user://max_lvl.txt"
 var document_punts_1 = "user://nivell1.txt"
 var document_punts_2 = "user://nivell2.txt"
 var document_punts_3 = "user://nivell3.txt"
@@ -31,14 +33,25 @@ var powerup3 = false
 
 func _init():
 	carrega_current_lvl()
+	carrega_max_lvl()
 	carrega_record_1()
 	carrega_record_2()
+	carrega_record_3()
+	carrega_record_4()
+	carrega_record_5()
+	carrega_record_6()
+	carrega_record_7()
+	carrega_record_8()
+	carrega_record_9()
+	
 
 func _input(event):
 	if Input.is_action_pressed("control") and Input.is_action_pressed("r"):
 		restart_highscore()
 
 func restart_highscore():
+	guarda_current_lvl(1)
+	guarda_max_lvl(1)
 	guarda_record_1(0)
 	guarda_record_2(0)
 	guarda_record_3(0)
@@ -52,6 +65,10 @@ func restart_highscore():
 func canvia_nivell(current_level):
 	current_lvl = current_level
 	guarda_current_lvl(current_level)
+
+func canvia_max_lvl(nivell_max):
+	max_lvl = nivell_max
+	guarda_max_lvl(nivell_max)
 
 func canvia_nivell_1(nivell1):
 	nivell_1 = nivell1
@@ -102,6 +119,21 @@ func guarda_current_lvl(nivell):
 	f.open(document_current_lvl, File.WRITE)
 	f.store_string(str(nivell))
 	f.close()
+
+func carrega_max_lvl():
+	var f = File.new()
+	if f.file_exists(document_max_lvl):
+		f.open(document_current_lvl, File.READ)
+		var content = f.get_as_text()
+		max_lvl = int(content)
+		f.close()
+
+func guarda_max_lvl(nivell):
+	var f = File.new()
+	f.open(document_max_lvl, File.WRITE)
+	f.store_string(str(nivell))
+	f.close()
+
 
 
 func carrega_record_1():
