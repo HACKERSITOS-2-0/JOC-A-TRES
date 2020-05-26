@@ -58,6 +58,10 @@ func dispara():
 		var balas = bala_personatge.instance()
 		balas.position = $"boquilla pistola".global_position 
 		get_parent().add_child(balas)
+		var player = AudioStreamPlayer.new()
+		self.add_child(player)
+		player.stream = load("res://Sons i músiques/Làser.wav")
+		player.play()
 		p_disparar = false
 		bales -= 1
 		$Camera2D/CanvasLayer/MarginContainer/HBoxContainer/MarginContainer/Label.text = str(bales)
