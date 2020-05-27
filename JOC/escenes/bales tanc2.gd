@@ -14,6 +14,8 @@ func _process(delta):
 	position += dir_objectiu * vel_bales * delta
 	
 func explota():
+	$balasprite.hide()
+	$explosio.play("explosio1")
 	queue_free()
 	
 func _on_area_bala_area_entered(_area):
