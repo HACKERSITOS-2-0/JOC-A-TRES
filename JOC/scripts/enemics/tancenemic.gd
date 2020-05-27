@@ -37,6 +37,8 @@ func _process(delta):
 #	$cos.global_rotation = direccio_actual.linear_interpolate(dir_objectiu, velocitat_rotacio * delta).angle()
 	
 	
+
+	
 	if dins:
 		desplacament = obstacle.global_position.direction_to(global_position)
 		desplacament /= obstacle.global_position.distance_to(global_position) / 50
@@ -49,10 +51,12 @@ func _process(delta):
 		$cano.global_rotation = dir_actual_cano.linear_interpolate(dir_objectiu, velocitat_rotacio * delta).angle()
 		
 	if objectiu:
+		
 #		var direccio_actual_cano = Vector2(1, 0).rotated($cano.global_rotation)
 #		var direccio_objectiu = (objectiu.global_position - global_position).normalized()
 		$cano.global_rotation = dir_actual_cano.linear_interpolate(dir_objectiu, vel_torreta * delta).angle()
-		dispara()
+		if dir_actual_cano.dot(dir_objectiu) > 0.9:
+			dispara()
 
 func _on_Visio_body_entered(body):
 	if body.name == "Personatge":
@@ -76,14 +80,11 @@ func _on_area_xoc_area_exited(area):
 	obstacle = null
 
 func dispara():
+
 	if p_disparar:
-#		p_disparar = false
-#		$Timer.start()
-#		var dir = Vector2(1,0).rotated($cano.global_rotation)
-#		emit_signal('dispara', bala_tanc, $cano/boquilla.global_position, dir)
-
-
+	
 		if in_screen:
+
 			var balas = bala_tanc.instance()
 			balas.position = $"cano/boquilla".global_position 
 			balas.dir_objectiu = dir_actual_cano
