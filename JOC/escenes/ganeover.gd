@@ -13,7 +13,7 @@ func _on_levels_pressed():
 	get_tree().change_scene("res://escenes/menu_levels.tscn")
 
 
-func _on_RETRY_pressed():
+func _on_retry_pressed():
 	if g_variables.current_lvl == 1:
 		get_tree().change_scene("res://escenes/nivells/nivell 1.tscn")
 	elif g_variables.current_lvl == 1:
