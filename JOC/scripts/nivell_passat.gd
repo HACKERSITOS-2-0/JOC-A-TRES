@@ -154,5 +154,6 @@ func _ready():
 			$MarginContainer/VBoxContainer/HBoxContainer/estrella2.visible = false
 			$MarginContainer/VBoxContainer/HBoxContainer/estrella3.visible = false
 			
-func _on_temps_de_veure_aix_timeout():
+
+func _on_Continue_pressed():
 	get_tree().change_scene("res://escenes/menu_levels.tscn")

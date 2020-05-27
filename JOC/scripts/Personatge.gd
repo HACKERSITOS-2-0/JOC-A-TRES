@@ -61,6 +61,7 @@ func dispara():
 		var player = AudioStreamPlayer.new()
 		self.add_child(player)
 		player.stream = load("res://Sons i músiques/Làser.wav")
+		player.volume_db = -7
 		player.play()
 		p_disparar = false
 		bales -= 1
