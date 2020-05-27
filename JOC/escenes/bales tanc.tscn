@@ -80,7 +80,6 @@ volume_db = -2.144
 autoplay = true
 
 [node name="Particles2D" type="Particles2D" parent="."]
-visible = false
 show_behind_parent = true
 position = Vector2( -6.5, 0 )
 amount = 100
