@@ -123,7 +123,7 @@ func guarda_current_lvl(nivell):
 func carrega_max_lvl():
 	var f = File.new()
 	if f.file_exists(document_max_lvl):
-		f.open(document_current_lvl, File.READ)
+		f.open(document_max_lvl, File.READ)
 		var content = f.get_as_text()
 		max_lvl = int(content)
 		f.close()
