@@ -7,6 +7,7 @@ var dir_objectiu:Vector2
 onready var obj = get_parent().get_node("Personatge")
 
 func _ready():
+	$animacions.play("normal")
 	global_rotation = dir_objectiu.angle()
 	$tempsvida.wait_time = tempsvida
 	
@@ -14,9 +15,11 @@ func _process(delta):
 	position += dir_objectiu * vel_bales * delta
 	
 func explota():
-	$balasprite.hide()
-	$explosio.play("explosio1")
-	queue_free()
+	$animacions.play("explosio1")
+	dir_objectiu = Vector2.ZERO
+	$Particles2D.emitting = false
+	$tempsanimacio.start()
+
 	
 func _on_area_bala_area_entered(_area):
 	explota()
@@ -27,3 +30,7 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 func _on_tempsvida_timeout():
 	explota()
+
+
+func _on_tempsanimacio_timeout():
+	queue_free()
