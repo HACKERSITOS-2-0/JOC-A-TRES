@@ -1,6 +1,6 @@
-extends KinematicBody2D
+extends Area2D
 
-export var vel_bales = 100
+export var vel_bales = 200
 export (float) var tempsvida
 var dir_objectiu:Vector2
 
@@ -30,7 +30,6 @@ func _on_VisibilityNotifier2D_screen_exited():
 
 func _on_tempsvida_timeout():
 	explota()
-
 
 func _on_tempsanimacio_timeout():
 	queue_free()
