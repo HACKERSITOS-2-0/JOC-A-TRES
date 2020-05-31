@@ -1,0 +1,139 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://imatges/fons/fons de inici.jpg" type="Texture" id=1]
+[ext_resource path="res://imatges/Controls/flechas.png" type="Texture" id=2]
+[ext_resource path="res://imatges/Controls/mouse-click-4-1107026.png" type="Texture" id=3]
+[ext_resource path="res://fonts/Revamped.otf" type="DynamicFontData" id=4]
+[ext_resource path="res://Sons i músiques/Menús.wav" type="AudioStream" id=5]
+[ext_resource path="res://fonts/Comfortaa-Bold.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://imatges/powerups/Mannpower_Mode_Powerup_Knockout_Icon.png" type="Texture" id=7]
+[ext_resource path="res://imatges/caixa bales/caixa_bales.png" type="Texture" id=8]
+[ext_resource path="res://imatges/powerups/Mannpower_Mode_Powerup_Resistance_Icon.png" type="Texture" id=9]
+[ext_resource path="res://imatges/powerups/Mannpower_Mode_Powerup_Agility_Icon.png" type="Texture" id=10]
+[ext_resource path="res://scripts/Controls.gd" type="Script" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+size = 50
+outline_size = 10
+outline_color = Color( 0, 0, 0, 1 )
+extra_spacing_bottom = 6
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 35
+outline_size = 4
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[node name="EscenaControls" type="Node"]
+script = ExtResource( 11 )
+
+[node name="fons de inici" type="Sprite" parent="."]
+position = Vector2( 418.856, 245.518 )
+texture = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+margin_left = 34.0
+margin_top = 41.0
+margin_right = 989.0
+margin_bottom = 100.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer"]
+modulate = Color( 0, 0.529412, 0.494118, 1 )
+margin_right = 955.0
+margin_bottom = 59.0
+custom_fonts/font = SubResource( 1 )
+text = "Controls"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer"]
+anchor_right = 0.02
+anchor_bottom = 0.067
+margin_left = 195.893
+margin_top = 144.213
+margin_right = 944.413
+margin_bottom = 354.013
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/VBoxContainer2"]
+margin_right = 816.0
+margin_bottom = 413.0
+custom_fonts/font = SubResource( 2 )
+text = "Prem les fletxes del teclat per moure el teu jugador per tot el mapa.
+
+
+Mou el ratolí per apuntar i fes clic esquerra per disparar.
+
+
+
+Les bales no són infinites així que mira de no malgastar-les i recull les caixes
+de munició que deixin els enemics abatuts.
+
+Aconsegueix aquest power-up per incrementar la teva velociat de moviment.
+
+Aconsegueix aquest power-up per incrementar la cadència de les bales.
+
+
+Aconsegueix aquest power-up per tenir un escut temporal."
+
+[node name="Mannpower_Mode_Powerup_Agility_Icon" type="Sprite" parent="."]
+position = Vector2( 101.734, 404.296 )
+scale = Vector2( 0.454581, 0.429789 )
+texture = ExtResource( 10 )
+
+[node name="Mannpower_Mode_Powerup_Knockout_Icon" type="Sprite" parent="."]
+position = Vector2( 112.841, 472.523 )
+scale = Vector2( 0.454581, 0.429789 )
+texture = ExtResource( 7 )
+
+[node name="Mannpower_Mode_Powerup_Resistance_Icon" type="Sprite" parent="."]
+position = Vector2( 117.601, 545.51 )
+scale = Vector2( 0.454581, 0.429789 )
+texture = ExtResource( 9 )
+
+[node name="mouse-click-4-1107026" type="Sprite" parent="."]
+position = Vector2( 96.4144, 232.478 )
+scale = Vector2( 0.108745, 0.103375 )
+texture = ExtResource( 3 )
+
+[node name="caixa_bales" type="Sprite" parent="."]
+position = Vector2( 104.907, 332.51 )
+texture = ExtResource( 8 )
+
+[node name="Fletxes" type="Sprite" parent="."]
+position = Vector2( 101.968, 161.077 )
+scale = Vector2( 0.108745, 0.103375 )
+texture = ExtResource( 2 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchor_right = 0.021
+anchor_bottom = 0.033
+margin_left = 882.0
+margin_top = 538.0
+margin_right = 978.496
+margin_bottom = 570.2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="MarginContainer"]
+margin_right = 118.0
+margin_bottom = 52.0
+custom_fonts/font = SubResource( 3 )
+text = "Back"
+flat = true
+[connection signal="pressed" from="MarginContainer/Button" to="." method="_on_Button_pressed"]

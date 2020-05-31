@@ -75,7 +75,6 @@ r={
 2d_physics/layer_6="bales personatge"
 2d_physics/layer_7="bales enemics"
 2d_physics/layer_8="caixa bales"
-2d_physics/layer_9="powerups"
 
 [rendering]
 
