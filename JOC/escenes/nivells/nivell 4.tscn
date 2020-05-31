@@ -5,7 +5,7 @@
 [ext_resource path="res://escenes/Personatge.tscn" type="PackedScene" id=3]
 [ext_resource path="res://mapa/obstacles.tres" type="TileSet" id=4]
 [ext_resource path="res://escenes/respawns.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scripts/nivells/nivell 2.gd" type="Script" id=6]
+[ext_resource path="res://scripts/nivells/nivell 4.gd" type="Script" id=6]
 [ext_resource path="res://Sons i músiques/TemaNivells.wav" type="AudioStream" id=7]
 [ext_resource path="res://escenes/tanc.tscn" type="PackedScene" id=8]
 [ext_resource path="res://escenes/powerup3.tscn" type="PackedScene" id=9]
@@ -66,11 +66,11 @@ radius = 29.2979
 [sub_resource type="CircleShape2D" id=3]
 radius = 14.8605
 
-[node name="nivell2" type="Node"]
+[node name="nivell4" type="Node"]
 script = ExtResource( 6 )
-tempsentretancs = 15
-tempsentrepowerups = 20
-tempsdenivell = 5
+tempsentretancs = 9
+tempsentrepowerups = 45
+tempsdenivell = 200
 tancs = ExtResource( 8 )
 p_1 = ExtResource( 10 )
 p_2 = ExtResource( 11 )
@@ -100,8 +100,7 @@ position = Vector2( 502.44, 298.295 )
 [node name="respawns" parent="." instance=ExtResource( 5 )]
 
 [node name="temps_de_nivell" type="Timer" parent="."]
-wait_time = 150.0
-one_shot = true
+wait_time = 200.0
 autostart = true
 
 [node name="tema_nivells" type="AudioStreamPlayer" parent="."]
@@ -168,6 +167,8 @@ shape = SubResource( 3 )
 
 [node name="obstacle5" type="Area2D" parent="obstacles petits"]
 position = Vector2( 35.959, 48.2114 )
+collision_layer = 16
+collision_mask = 0
 __meta__ = {
 "_edit_group_": true
 }

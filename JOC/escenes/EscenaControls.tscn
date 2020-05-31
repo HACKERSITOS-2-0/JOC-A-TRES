@@ -2,7 +2,7 @@
 
 [ext_resource path="res://imatges/fons/fons de inici.jpg" type="Texture" id=1]
 [ext_resource path="res://imatges/Controls/flechas.png" type="Texture" id=2]
-[ext_resource path="res://imatges/Controls/mouse-click-4-1107026.png" type="Texture" id=3]
+[ext_resource path="res://imatges/Controls/img_425928.png" type="Texture" id=3]
 [ext_resource path="res://fonts/Revamped.otf" type="DynamicFontData" id=4]
 [ext_resource path="res://Sons i músiques/Menús.wav" type="AudioStream" id=5]
 [ext_resource path="res://fonts/Comfortaa-Bold.ttf" type="DynamicFontData" id=6]
@@ -20,7 +20,9 @@ extra_spacing_bottom = 6
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 20
+size = 19
+outline_size = 6
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=3]
@@ -48,7 +50,7 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="CanvasLayer/VBoxContainer"]
-modulate = Color( 0, 0.529412, 0.494118, 1 )
+modulate = Color( 1, 0.376471, 0, 1 )
 margin_right = 955.0
 margin_bottom = 59.0
 custom_fonts/font = SubResource( 1 )
@@ -66,20 +68,23 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="CanvasLayer/VBoxContainer2"]
-margin_right = 816.0
-margin_bottom = 413.0
+margin_right = 1062.0
+margin_bottom = 447.0
 custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Prem les fletxes del teclat per moure el teu jugador per tot el mapa.
+
 
 
 Mou el ratolí per apuntar i fes clic esquerra per disparar.
 
 
-
 Les bales no són infinites així que mira de no malgastar-les i recull les caixes
 de munició que deixin els enemics abatuts.
 
+
 Aconsegueix aquest power-up per incrementar la teva velociat de moviment.
+
 
 Aconsegueix aquest power-up per incrementar la cadència de les bales.
 
@@ -87,23 +92,23 @@ Aconsegueix aquest power-up per incrementar la cadència de les bales.
 Aconsegueix aquest power-up per tenir un escut temporal."
 
 [node name="Mannpower_Mode_Powerup_Agility_Icon" type="Sprite" parent="."]
-position = Vector2( 101.734, 404.296 )
+position = Vector2( 106.399, 419.459 )
 scale = Vector2( 0.454581, 0.429789 )
 texture = ExtResource( 10 )
 
 [node name="Mannpower_Mode_Powerup_Knockout_Icon" type="Sprite" parent="."]
-position = Vector2( 112.841, 472.523 )
+position = Vector2( 109.342, 492.351 )
 scale = Vector2( 0.454581, 0.429789 )
 texture = ExtResource( 7 )
 
 [node name="Mannpower_Mode_Powerup_Resistance_Icon" type="Sprite" parent="."]
-position = Vector2( 117.601, 545.51 )
+position = Vector2( 105.937, 565.338 )
 scale = Vector2( 0.454581, 0.429789 )
 texture = ExtResource( 9 )
 
 [node name="mouse-click-4-1107026" type="Sprite" parent="."]
-position = Vector2( 96.4144, 232.478 )
-scale = Vector2( 0.108745, 0.103375 )
+position = Vector2( 95.1469, 242.928 )
+scale = Vector2( 0.0802943, 0.0721653 )
 texture = ExtResource( 3 )
 
 [node name="caixa_bales" type="Sprite" parent="."]
@@ -111,7 +116,7 @@ position = Vector2( 104.907, 332.51 )
 texture = ExtResource( 8 )
 
 [node name="Fletxes" type="Sprite" parent="."]
-position = Vector2( 101.968, 161.077 )
+position = Vector2( 100.802, 158.744 )
 scale = Vector2( 0.108745, 0.103375 )
 texture = ExtResource( 2 )
 

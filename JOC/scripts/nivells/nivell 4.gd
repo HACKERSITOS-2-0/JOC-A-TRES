@@ -2,17 +2,18 @@ extends Node
 
 onready var g_variables = get_node('..').get_node('GlobalVariables')
 
+export var tempsentretancs:int
+export var tempsentrepowerups:int
+export var tempsdenivell:int
+
 var powerup1:bool = false setget canvia_powerup1
 var powerup2:bool = false setget canvia_powerup2
 var powerup3:bool = false setget canvia_powerup3
 
 var copia 
 
-export var tempsentretancs:int
-export var tempsentrepowerups:int
-export var tempsdenivell:int
-
 export (PackedScene) var tancs
+export (PackedScene) var tancs2
 export (PackedScene) var p_1
 export (PackedScene) var p_2
 export (PackedScene) var p_3
@@ -35,48 +36,6 @@ func canvia_powerup3(n_powerup3):
 	powerup3 = n_powerup3
 	g_variables.powerup3 = n_powerup3
 	
-
-func _ready():
-	$temps_de_nivell.wait_time = tempsdenivell
-	$tempsentretancs.wait_time = tempsentretancs
-	$tempsentrepowerups.wait_time = tempsentrepowerups
-	g_variables.current_lvl = 1
-
-	
-
-func _on_temps_de_nivell_timeout():
-	if g_variables.max_lvl <= 1:
-		g_variables.max_lvl = 2
-	g_variables.current_lvl = 2
-	g_variables.nivell_1 = $Personatge/Camera2D/CanvasLayer/marcador/barra_vida/HBoxContainer/TextureProgress.value
-	get_tree().change_scene("res://escenes/nivell_passat.tscn")
-	
-	
-func _on_powerup1_timeout():
-	powerup1 = false
-	$Personatge.powerup1 = false
-func _on_powerup2_timeout():
-	powerup2 = false
-	$Personatge.powerup2 = false
-func _on_powerup3_timeout():
-	powerup3 = false
-	$Personatge.powerup3 = false
-
-
-func _on_tempsentrepowerups_timeout():
-	print('creat')
-	var power = randi() % 3 + 1
-	if power == 1:
-		copia = p_1.instance()
-	elif power == 2:
-		copia = p_2.instance()
-	elif power == 3:
-		copia = p_3.instance()
-	copia.position = Vector2(612,300)
-	add_child(copia)
-		
-
-
 func _on_tempsentretancs_timeout():
 	var tanc_copia = tancs.instance()
 	respawn_n = randi() % 14
@@ -109,3 +68,39 @@ func _on_tempsentretancs_timeout():
 	elif respawn_n == 13:
 		tanc_copia.position = $respawns/respawn14.position
 	add_child(tanc_copia)
+	
+func _ready():
+	$temps_de_nivell.wait_time = tempsdenivell
+	$tempsentretancs.wait_time = tempsentretancs
+	$tempsentrepowerups.wait_time = tempsentrepowerups
+	g_variables.current_lvl = 4
+
+func _on_powerup1_timeout():
+	powerup1 = false
+	$Personatge.powerup1 = false
+func _on_powerup2_timeout():
+	powerup2 = false
+	$Personatge.powerup2 = false
+func _on_powerup3_timeout():
+	powerup3 = false
+	$Personatge.powerup3 = false
+
+func _on_tempsentrepowerups_timeout():
+	print('creat')
+	var power = randi() % 3 + 1
+	if power == 1:
+		copia = p_1.instance()
+	elif power == 2:
+		copia = p_2.instance()
+	elif power == 3:
+		copia = p_3.instance()
+	copia.position = Vector2(612,300)
+	add_child(copia)
+
+
+func _on_temps_de_nivell_timeout():
+	if g_variables.max_lvl <= 4:
+		g_variables.max_lvl = 5
+	g_variables.current_lvl = 5
+	g_variables.nivell_4 = $Personatge/Camera2D/CanvasLayer/marcador/barra_vida/HBoxContainer/TextureProgress.value
+	get_tree().change_scene("res://escenes/menu_levels.tscn")
