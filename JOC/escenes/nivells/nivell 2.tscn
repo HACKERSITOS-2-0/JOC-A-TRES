@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://imatges/mapa/terrainTiles_retina.png" type="Texture" id=1]
 [ext_resource path="res://escenes/nivells/Límits Mapa.tscn" type="PackedScene" id=2]
@@ -7,6 +7,10 @@
 [ext_resource path="res://escenes/respawns.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scripts/nivells/nivell 2.gd" type="Script" id=6]
 [ext_resource path="res://Sons i músiques/TemaNivells.wav" type="AudioStream" id=7]
+[ext_resource path="res://escenes/tanc.tscn" type="PackedScene" id=8]
+[ext_resource path="res://escenes/powerup3.tscn" type="PackedScene" id=9]
+[ext_resource path="res://escenes/powerup1.tscn" type="PackedScene" id=10]
+[ext_resource path="res://escenes/powerup2.tscn" type="PackedScene" id=11]
 
 [sub_resource type="TileSet" id=1]
 1/name = "suelo"
@@ -64,6 +68,13 @@ radius = 14.8605
 
 [node name="nivell2" type="Node"]
 script = ExtResource( 6 )
+tempsentretancs = 15
+tempsentrepowerups = 20
+tempsdenivell = 120
+tancs = ExtResource( 8 )
+p_1 = ExtResource( 10 )
+p_2 = ExtResource( 11 )
+p_3 = ExtResource( 9 )
 
 [node name="mapa" type="Node" parent="."]
 
@@ -79,7 +90,7 @@ tile_data = PoolIntArray( 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 
 scale = Vector2( 0.5, 0.5 )
 tile_set = ExtResource( 4 )
 format = 1
-tile_data = PoolIntArray( 65537, -2147483640, 0, 65543, 7, 0, 65564, 3, 0, 131084, -2147483640, 0, 131091, 7, 0, 262149, 5, 0, 327681, -2147483644, 0, 393230, -2147483640, 0, 393239, 7, 0, 524295, -2147483640, 0, 524301, 7, 0, 524306, -2147483644, 0, 524317, 7, 0, 720899, 7, 0, 786448, -2147483640, 0, 851989, 7, 0, 851995, 5, 0, 917511, 3, 0, 983063, -2147483644, 0, 1048590, 7, 0, 1114113, -2147483640, 0, 1114142, -2147483640, 0 )
+tile_data = PoolIntArray( 65537, -2147483640, 0, 65543, 7, 0, 65564, 3, 0, 131084, -2147483640, 0, 131091, 7, 0, 262149, 5, 0, 327681, -2147483644, 0, 393230, -2147483640, 0, 393234, 4, 0, 393239, 7, 0, 524295, -2147483640, 0, 524301, 7, 0, 524317, 7, 0, 720899, 7, 0, 786448, -2147483640, 0, 851989, 7, 0, 851995, 5, 0, 917511, 3, 0, 983063, -2147483644, 0, 1048590, 7, 0, 1114113, -2147483640, 0, 1114142, -2147483640, 0 )
 
 [node name="Personatge" parent="." instance=ExtResource( 3 )]
 position = Vector2( 502.44, 298.295 )
@@ -89,7 +100,7 @@ position = Vector2( 502.44, 298.295 )
 [node name="respawns" parent="." instance=ExtResource( 5 )]
 
 [node name="temps_de_nivell" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 120.0
 one_shot = true
 autostart = true
 
@@ -118,11 +129,9 @@ shape = SubResource( 2 )
 
 [node name="obstacles3" type="Area2D" parent="obstacles grans"]
 position = Vector2( 607.038, 288.79 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="obstacles grans/obstacles3"]
+position = Vector2( -0.00012207, -63.0069 )
 shape = SubResource( 2 )
 
 [node name="obstacles petits" type="Node" parent="."]
@@ -316,4 +325,25 @@ __meta__ = {
 [node name="CollisionShape2D" type="CollisionShape2D" parent="obstacles petits/obstacle19"]
 position = Vector2( 10.3182, -2.56958 )
 shape = SubResource( 3 )
+
+[node name="tempsentretancs" type="Timer" parent="."]
+autostart = true
+
+[node name="tempsentrepowerups" type="Timer" parent="."]
+wait_time = 20.0
+autostart = true
+
+[node name="powerup1" type="Timer" parent="."]
+wait_time = 5.0
+
+[node name="powerup2" type="Timer" parent="."]
+wait_time = 10.0
+
+[node name="powerup3" type="Timer" parent="."]
+wait_time = 10.0
 [connection signal="timeout" from="temps_de_nivell" to="." method="_on_temps_de_nivell_timeout"]
+[connection signal="timeout" from="tempsentretancs" to="." method="_on_tempsentretancs_timeout"]
+[connection signal="timeout" from="tempsentrepowerups" to="." method="_on_tempsentrepowerups_timeout"]
+[connection signal="timeout" from="powerup1" to="." method="_on_powerup1_timeout"]
+[connection signal="timeout" from="powerup2" to="." method="_on_powerup2_timeout"]
+[connection signal="timeout" from="powerup3" to="." method="_on_powerup3_timeout"]
