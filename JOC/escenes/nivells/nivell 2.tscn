@@ -7,10 +7,11 @@
 [ext_resource path="res://escenes/respawns.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scripts/nivells/nivell 2.gd" type="Script" id=6]
 [ext_resource path="res://Sons i músiques/TemaNivells.wav" type="AudioStream" id=7]
-[ext_resource path="res://escenes/tanc.tscn" type="PackedScene" id=8]
+[ext_resource path="res://escenes/enemics/tanc.tscn" type="PackedScene" id=8]
 [ext_resource path="res://escenes/powerup3.tscn" type="PackedScene" id=9]
 [ext_resource path="res://escenes/powerup1.tscn" type="PackedScene" id=10]
 [ext_resource path="res://escenes/powerup2.tscn" type="PackedScene" id=11]
+
 
 [sub_resource type="TileSet" id=1]
 1/name = "suelo"

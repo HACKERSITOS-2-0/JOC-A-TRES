@@ -2,7 +2,7 @@
 
 [ext_resource path="res://imatges/bales/bala.png" type="Texture" id=1]
 [ext_resource path="res://Sons i músiques/BalaCanó.wav" type="AudioStream" id=2]
-[ext_resource path="res://escenes/bales tanc2.gd" type="Script" id=3]
+[ext_resource path="res://scripts/enemics/bales tanc.gd" type="Script" id=3]
 [ext_resource path="res://imatges/bales/pngkey.com-sun-png-1364883.png" type="Texture" id=4]
 
 [sub_resource type="CapsuleShape2D" id=1]
