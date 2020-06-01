@@ -41,14 +41,14 @@ visible = false
 shape = SubResource( 1 )
 
 [node name="cano" parent="." index="3"]
-position = Vector2( -424.601, -53.8123 )
+position = Vector2( -434.032, -76.4418 )
 texture = ExtResource( 3 )
-offset = Vector2( 478.299, 55.2462 )
+offset = Vector2( 480, 55.246 )
 region_enabled = true
-region_rect = Rect2( 512, 35, 60, 22 )
+region_rect = Rect2( 200, 61, 71, 27 )
 
 [node name="boquilla" parent="cano" index="0"]
-position = Vector2( 55, 0 )
+position = Vector2( 518.583, 59.9163 )
 
 [node name="Visio" type="Area2D" parent="." index="4"]
 visible = false
@@ -80,13 +80,24 @@ autostart = true
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="8"]
 
 [node name="cano2" type="Sprite" parent="." index="9"]
-position = Vector2( -14.2301, 0.527039 )
+position = Vector2( -24.2301, 0.527039 )
 texture = ExtResource( 3 )
 region_enabled = true
-region_rect = Rect2( 512, 35, 60, 22 )
+region_rect = Rect2( 72, 94, 52, 36 )
 
 [node name="boquilla2" type="Position2D" parent="cano2" index="0"]
-position = Vector2( 26.8791, -0.527039 )
+position = Vector2( 30.4269, 0.0277405 )
+
+[node name="cano3" type="Sprite" parent="." index="10"]
+position = Vector2( 10.2432, 8.35941 )
+texture = ExtResource( 3 )
+centered = false
+flip_v = true
+region_enabled = true
+region_rect = Rect2( 200, 61, 71, 27 )
+
+[node name="boquilla3" type="Position2D" parent="cano3" index="0"]
+position = Vector2( 74.1487, 11.1927 )
 [connection signal="body_entered" from="Visio" to="." method="_on_Visio_body_entered"]
 [connection signal="body_exited" from="Visio" to="." method="_on_Visio_body_exited"]
 [connection signal="area_entered" from="area_xoc" to="." method="_on_area_xoc_area_entered"]
