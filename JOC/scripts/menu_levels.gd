@@ -200,3 +200,11 @@ func _on_nivells4_pressed():
 	yield(get_tree().create_timer(0.5), "timeout")
 	get_tree().change_scene("res://escenes/nivells/nivell 4.tscn")
 
+
+func _on_nivells5_pressed():
+	var player = AudioStreamPlayer.new()
+	self.add_child(player)
+	player.stream = load("res://Sons i músiques/Endavant.wav")
+	player.play()
+	yield(get_tree().create_timer(0.5), "timeout")
+	get_tree().change_scene("res://escenes/nivells/nivell 5.tscn")

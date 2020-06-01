@@ -23,8 +23,6 @@ var dir_actual_cano:Vector2
 onready var obj = get_parent().get_node("Personatge")
 
 func _ready():
-	$Visio/CollisionShape2D.shape.radius = radi_visio
-	$area_xoc/CollisionShape2D.shape.radius = radi_xoc
 	$Timer.start()
 
 
@@ -85,6 +83,7 @@ func dispara():
 			balas.dir_objectiu = dir_actual_cano
 			get_parent().add_child(balas)
 			p_disparar = false
+			$Timer.start()
 
 func _on_Timer_timeout():
 	p_disparar = true

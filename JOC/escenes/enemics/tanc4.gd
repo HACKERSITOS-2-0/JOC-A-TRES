@@ -35,6 +35,7 @@ func _process(delta):
 		desplacament /= obstacle.global_position.distance_to(global_position) / 50
 		dir_objectiu += desplacament
 		
+		
 	if en_moviment:
 		move_and_collide(dir_objectiu * velocitat * delta)
 		$cos.global_rotation = direccio_actual.linear_interpolate(dir_objectiu, velocitat_rotacio * delta).angle()
@@ -77,6 +78,8 @@ func dispara():
 			balas.position = $"cano/boquilla".global_position 
 			balas.dir_objectiu = dir_actual_cano
 			get_parent().add_child(balas)
+			$cano/explosio.visible = true
+			$temps_ex.start()
 			p_disparar = false
 			$Timer.start()
 
@@ -93,5 +96,11 @@ func _on_area_cos_area_entered(area):
 			get_parent().add_child(caixa)
 			queue_free()
 
+
 func _on_VisibilityNotifier2D_screen_entered():
 	in_screen = true
+
+
+func _on_temps_ex_timeout():
+	$cano/explosio.visible = false
+

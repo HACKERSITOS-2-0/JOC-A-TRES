@@ -11,7 +11,7 @@
 [ext_resource path="res://escenes/powerup3.tscn" type="PackedScene" id=9]
 [ext_resource path="res://escenes/powerup1.tscn" type="PackedScene" id=10]
 [ext_resource path="res://escenes/powerup2.tscn" type="PackedScene" id=11]
-[ext_resource path="res://escenes/enemics/tanc2.tscn" type="PackedScene" id=12]
+[ext_resource path="res://escenes/enemics/tanc3.tscn" type="PackedScene" id=12]
 
 [sub_resource type="TileSet" id=1]
 1/name = "suelo"

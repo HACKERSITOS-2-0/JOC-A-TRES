@@ -89,8 +89,16 @@ func _on_area_personatge_area_entered(area):
 			$Camera2D/CanvasLayer/marcador/barra_vida/HBoxContainer/TextureProgress.value -= 10
 			if $Camera2D/CanvasLayer/marcador/barra_vida/HBoxContainer/TextureProgress.value == 0:
 				get_tree().change_scene("res://escenes/gameover.tscn")
-		if area.name == 'area_bala_2':
+		elif area.name == 'area_bala_2':
 			$Camera2D/CanvasLayer/marcador/barra_vida/HBoxContainer/TextureProgress.value -= 5
+			if $Camera2D/CanvasLayer/marcador/barra_vida/HBoxContainer/TextureProgress.value == 0:
+				get_tree().change_scene("res://escenes/gameover.tscn")
+		elif area.name == 'area_bala_3':
+			$Camera2D/CanvasLayer/marcador/barra_vida/HBoxContainer/TextureProgress.value -= 5
+			if $Camera2D/CanvasLayer/marcador/barra_vida/HBoxContainer/TextureProgress.value == 0:
+				get_tree().change_scene("res://escenes/gameover.tscn")
+		elif area.name == 'area_bala_4':
+			$Camera2D/CanvasLayer/marcador/barra_vida/HBoxContainer/TextureProgress.value -= 40
 			if $Camera2D/CanvasLayer/marcador/barra_vida/HBoxContainer/TextureProgress.value == 0:
 				get_tree().change_scene("res://escenes/gameover.tscn")
 	else:
