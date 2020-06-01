@@ -90,7 +90,7 @@ func _on_area_personatge_area_entered(area):
 			if $Camera2D/CanvasLayer/marcador/barra_vida/HBoxContainer/TextureProgress.value == 0:
 				get_tree().change_scene("res://escenes/gameover.tscn")
 		if area.name == 'area_bala_2':
-			$Camera2D/CanvasLayer/marcador/barra_vida/HBoxContainer/TextureProgress.value -= 25
+			$Camera2D/CanvasLayer/marcador/barra_vida/HBoxContainer/TextureProgress.value -= 5
 			if $Camera2D/CanvasLayer/marcador/barra_vida/HBoxContainer/TextureProgress.value == 0:
 				get_tree().change_scene("res://escenes/gameover.tscn")
 	else:

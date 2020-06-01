@@ -23,14 +23,14 @@ height = 0.276672
 
 [sub_resource type="SpriteFrames" id=2]
 animations = [ {
-"frames": [ ExtResource( 7 ) ],
-"loop": true,
-"name": "parat",
-"speed": 8.0
-}, {
 "frames": [ ExtResource( 12 ), ExtResource( 8 ), ExtResource( 10 ), ExtResource( 7 ), ExtResource( 11 ), ExtResource( 9 ), ExtResource( 2 ), ExtResource( 6 ) ],
 "loop": true,
 "name": "camina",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 7 ) ],
+"loop": true,
+"name": "parat",
 "speed": 8.0
 } ]
 
@@ -61,7 +61,6 @@ rotation = -1.5708
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 2 )
 animation = "camina"
-frame = 7
 playing = true
 
 [node name="collision" type="CollisionShape2D" parent="."]

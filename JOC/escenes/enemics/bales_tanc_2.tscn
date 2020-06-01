@@ -8,11 +8,11 @@ radius = 7.56387
 height = 20.5111
 
 [node name="area_bala_2" type="Area2D"]
-scale = Vector2( 0.5, 0.5 )
+scale = Vector2( 0.4, 0.4 )
 collision_layer = 128
 collision_mask = 17
 script = ExtResource( 1 )
-vel_bales = 75
+vel_bales = 250
 tempsvida = 3.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
