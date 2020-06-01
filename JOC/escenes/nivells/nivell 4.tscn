@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://imatges/mapa/terrainTiles_retina.png" type="Texture" id=1]
 [ext_resource path="res://escenes/nivells/Límits Mapa.tscn" type="PackedScene" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://escenes/powerup3.tscn" type="PackedScene" id=9]
 [ext_resource path="res://escenes/powerup1.tscn" type="PackedScene" id=10]
 [ext_resource path="res://escenes/powerup2.tscn" type="PackedScene" id=11]
+[ext_resource path="res://escenes/enemics/tanc2.tscn" type="PackedScene" id=12]
 
 [sub_resource type="TileSet" id=1]
 1/name = "suelo"
@@ -72,6 +73,7 @@ tempsentretancs = 9
 tempsentrepowerups = 45
 tempsdenivell = 200
 tancs = ExtResource( 8 )
+tanc2 = ExtResource( 12 )
 p_1 = ExtResource( 10 )
 p_2 = ExtResource( 11 )
 p_3 = ExtResource( 9 )

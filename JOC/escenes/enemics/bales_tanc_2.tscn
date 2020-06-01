@@ -8,7 +8,11 @@ radius = 7.56387
 height = 20.5111
 
 [node name="area_bala_2" type="Area2D"]
+scale = Vector2( 0.5, 0.5 )
+collision_layer = 128
+collision_mask = 17
 script = ExtResource( 1 )
+vel_bales = 75
 tempsvida = 3.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -22,3 +26,8 @@ region_enabled = true
 region_rect = Rect2( 348, 222, 36, 16 )
 
 [node name="tempsvida" type="Timer" parent="."]
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+[connection signal="area_entered" from="." to="." method="_on_area_bala_2_area_entered"]
+[connection signal="timeout" from="tempsvida" to="." method="_on_tempsvida_timeout"]
+[connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

@@ -10,7 +10,7 @@
 extents = Vector2( 41.4735, 41.8297 )
 
 [sub_resource type="CircleShape2D" id=2]
-radius = 275.173
+radius = 250.0
 
 [sub_resource type="CircleShape2D" id=3]
 radius = 62.449
@@ -19,13 +19,14 @@ radius = 62.449
 extents = Vector2( 41.4735, 39.2576 )
 
 [node name="tanc2" instance=ExtResource( 1 )]
+scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 2 )
-velocitat = 110
-velocitat_rotacio = 2.3
-temporitzador_pistola = 0.8
+velocitat = 50
+velocitat_rotacio = 2.0
+temporitzador_pistola = 2.0
 salut = 150
 vel_torreta = 3.0
-radi_visio = 350
+radi_visio = 250
 radi_xoc = 85
 bala_tanc = ExtResource( 5 )
 caixa_bales = ExtResource( 4 )
@@ -48,24 +49,33 @@ region_rect = Rect2( 512, 35, 60, 22 )
 position = Vector2( 55, 0 )
 
 [node name="Visio" type="Area2D" parent="." index="4"]
+collision_layer = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Visio" index="0"]
 shape = SubResource( 2 )
 
 [node name="area_xoc" type="Area2D" parent="." index="5"]
+collision_layer = 0
+collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_xoc" index="0"]
 shape = SubResource( 3 )
 
 [node name="area_cos" type="Area2D" parent="." index="6"]
+collision_layer = 4
+collision_mask = 32
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_cos" index="0"]
 shape = SubResource( 4 )
 
 [node name="Timer" type="Timer" parent="." index="7"]
+autostart = true
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="8"]
 [connection signal="body_entered" from="Visio" to="." method="_on_Visio_body_entered"]
 [connection signal="body_exited" from="Visio" to="." method="_on_Visio_body_exited"]
 [connection signal="area_entered" from="area_xoc" to="." method="_on_area_xoc_area_entered"]
 [connection signal="area_exited" from="area_xoc" to="." method="_on_area_xoc_area_exited"]
 [connection signal="area_entered" from="area_cos" to="." method="_on_area_cos_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="screen_entered" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_entered"]

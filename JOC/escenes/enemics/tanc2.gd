@@ -47,8 +47,8 @@ func _process(delta):
 		
 		$cano.global_rotation = dir_actual_cano.linear_interpolate(dir_objectiu, vel_torreta * delta).angle()
 		if dir_actual_cano.dot(dir_objectiu) > 0.9:
-#			dispara()
-			pass
+			dispara()
+			
 
 
 func _on_Visio_body_entered(body):
@@ -94,3 +94,7 @@ func _on_area_cos_area_entered(area):
 			caixa.position = global_position
 			get_parent().add_child(caixa)
 			queue_free()
+
+
+func _on_VisibilityNotifier2D_screen_entered():
+	in_screen = true

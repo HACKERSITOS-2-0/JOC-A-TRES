@@ -17,14 +17,13 @@ func explota():
 	dir_objectiu = Vector2.ZERO
 	queue_free()
 
-func _on_area_bala_area_entered(_area):
-	explota()
-
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
 
 func _on_tempsvida_timeout():
 	explota()
 
-func _on_tempsanimacio_timeout():
-	queue_free()
+func _on_area_bala_2_area_entered(area):
+	explota()
+
+

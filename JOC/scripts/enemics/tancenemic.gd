@@ -33,7 +33,7 @@ func _process(delta):
 	var direccio_actual = Vector2(1, 0).rotated($cos.global_rotation)
 	var dir_objectiu = (obj.global_position - global_position).normalized()
 #	$cos.global_rotation = direccio_actual.linear_interpolate(dir_objectiu, velocitat_rotacio * delta).angle()
-	
+	print(dir_objectiu)
 	if dins:
 		desplacament = obstacle.global_position.direction_to(global_position)
 		desplacament /= obstacle.global_position.distance_to(global_position) / 50
