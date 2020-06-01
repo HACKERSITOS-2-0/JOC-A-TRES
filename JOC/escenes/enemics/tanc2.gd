@@ -85,13 +85,9 @@ func dispara():
 
 func _on_Timer_timeout():
 	p_disparar = true
-
-
-			
-
+	
 func _on_area_cos_area_entered(area):
 	if area.name == 'area_bala_p':
-		print(1)
 		vides -= 1
 		if vides <= 0:
 			var caixa = caixa_bales.instance()

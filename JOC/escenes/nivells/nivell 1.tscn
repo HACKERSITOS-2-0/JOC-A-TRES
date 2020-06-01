@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://mapa/obstacles.tres" type="TileSet" id=1]
 [ext_resource path="res://imatges/mapa/terrainTiles_retina.png" type="Texture" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://escenes/powerup1.tscn" type="PackedScene" id=10]
 [ext_resource path="res://escenes/powerup3.tscn" type="PackedScene" id=11]
 [ext_resource path="res://escenes/powerup2.tscn" type="PackedScene" id=12]
+[ext_resource path="res://escenes/enemics/tanc2.tscn" type="PackedScene" id=13]
 
 [sub_resource type="TileSet" id=1]
 0/name = "terrainTiles_retina.png 0"
@@ -241,6 +242,9 @@ autostart = true
 [node name="tempsentretancs" type="Timer" parent="."]
 wait_time = 10.0
 autostart = true
+
+[node name="tanc2" parent="." instance=ExtResource( 13 )]
+position = Vector2( 304.724, 178.209 )
 [connection signal="timeout" from="temps_de_nivell" to="." method="_on_temps_de_nivell_timeout"]
 [connection signal="timeout" from="powerup1" to="." method="_on_powerup1_timeout"]
 [connection signal="timeout" from="powerup2" to="." method="_on_powerup2_timeout"]
