@@ -71,7 +71,7 @@ collision_mask = 32
 shape = SubResource( 4 )
 
 [node name="Timer" type="Timer" parent="." index="7"]
-wait_time = 0.2
+wait_time = 0.15
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="." index="8"]
 [connection signal="body_entered" from="Visio" to="." method="_on_Visio_body_entered"]
