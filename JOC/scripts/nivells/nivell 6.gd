@@ -67,7 +67,7 @@ func _on_tempsentretancs_timeout():
 
 	
 func _ready():
-	g_variables.current_lvl = 4
+	g_variables.current_lvl = 6
 
 func _on_powerup1_timeout():
 	powerup1 = false
@@ -93,9 +93,9 @@ func _on_tempsentrepowerups_timeout():
 
 
 func _on_temps_de_nivell_timeout():
-	g_variables.max_lvl = 5
-	g_variables.current_lvl = 5
-	g_variables.nivell_4 = $Personatge/Camera2D/CanvasLayer/marcador/barra_vida/HBoxContainer/TextureProgress.value
+	g_variables.max_lvl = 7
+	g_variables.current_lvl = 7
+	g_variables.nivell_6 = $Personatge/Camera2D/CanvasLayer/marcador/barra_vida/HBoxContainer/TextureProgress.value
 	get_tree().change_scene("res://escenes/menu_levels.tscn")
 
 

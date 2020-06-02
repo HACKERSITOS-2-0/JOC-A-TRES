@@ -9,7 +9,7 @@ var powerup3:bool = false setget canvia_powerup3
 var copia 
 
 export (PackedScene) var tancs
-export (PackedScene) var tanc2
+export (PackedScene) var tancs2
 export (PackedScene) var p_1
 export (PackedScene) var p_2
 export (PackedScene) var p_3
@@ -31,6 +31,11 @@ func canvia_powerup3(n_powerup3):
 	$powerup3.start()
 	powerup3 = n_powerup3
 	g_variables.powerup3 = n_powerup3
+	
+
+func _ready():
+	g_variables.current_lvl = 9
+
 	
 func _on_tempsentretancs_timeout():
 	var tanc_copia = tancs.instance()
@@ -65,10 +70,12 @@ func _on_tempsentretancs_timeout():
 		tanc_copia.position = $respawns/respawn14.position
 	add_child(tanc_copia)
 
-	
-func _ready():
-	g_variables.current_lvl = 4
 
+func _on_temps_de_nivell_timeout():
+	g_variables.nivell_9 = $Personatge/Camera2D/CanvasLayer/marcador/barra_vida/HBoxContainer/TextureProgress.value
+	get_tree().change_scene("res://escenes/nivell_passat.tscn")
+	
+	
 func _on_powerup1_timeout():
 	powerup1 = false
 	$Personatge.powerup1 = false
@@ -79,8 +86,8 @@ func _on_powerup3_timeout():
 	powerup3 = false
 	$Personatge.powerup3 = false
 
+
 func _on_tempsentrepowerups_timeout():
-	print('creat')
 	var power = randi() % 3 + 1
 	if power == 1:
 		copia = p_1.instance()
@@ -90,44 +97,38 @@ func _on_tempsentrepowerups_timeout():
 		copia = p_3.instance()
 	copia.position = Vector2(612,300)
 	add_child(copia)
-
-
-func _on_temps_de_nivell_timeout():
-	g_variables.max_lvl = 5
-	g_variables.current_lvl = 5
-	g_variables.nivell_4 = $Personatge/Camera2D/CanvasLayer/marcador/barra_vida/HBoxContainer/TextureProgress.value
-	get_tree().change_scene("res://escenes/menu_levels.tscn")
+		
 
 
 func _on_tempsentretancs2_timeout():
-	var tanc2_copia = tanc2.instance()
+	var tanc_copia = tancs2.instance()
 	respawn_n = randi() % 14
 	if respawn_n == 0:
-		tanc2_copia.position = $respawns/respawn.position
+		tanc_copia.position = $respawns/respawn.position
 	elif respawn_n == 1:
-		tanc2_copia.position = $respawns/respawn2.position
+		tanc_copia.position = $respawns/respawn2.position
 	elif respawn_n == 2:
-		tanc2_copia.position = $respawns/respawn3.position
+		tanc_copia.position = $respawns/respawn3.position
 	elif respawn_n == 3:
-		tanc2_copia.position = $respawns/respawn4.position
+		tanc_copia.position = $respawns/respawn4.position
 	elif respawn_n == 4:
-		tanc2_copia.position = $respawns/respawn5.position
+		tanc_copia.position = $respawns/respawn5.position
 	elif respawn_n == 5:
-		tanc2_copia.position = $respawns/respawn6.position
+		tanc_copia.position = $respawns/respawn6.position
 	elif respawn_n == 6:
-		tanc2_copia.position = $respawns/respawn7.position
+		tanc_copia.position = $respawns/respawn7.position
 	elif respawn_n == 7:
-		tanc2_copia.position = $respawns/respawn8.position
+		tanc_copia.position = $respawns/respawn8.position
 	elif respawn_n == 8:
-		tanc2_copia.position = $respawns/respawn9.position
+		tanc_copia.position = $respawns/respawn9.position
 	elif respawn_n == 9:
-		tanc2_copia.position = $respawns/respawn10.position
+		tanc_copia.position = $respawns/respawn10.position
 	elif respawn_n == 10:
-		tanc2_copia.position = $respawns/respawn11.position
+		tanc_copia.position = $respawns/respawn11.position
 	elif respawn_n == 11:
-		tanc2_copia.position = $respawns/respawn12.position
+		tanc_copia.position = $respawns/respawn12.position
 	elif respawn_n == 12:
-		tanc2_copia.position = $respawns/respawn13.position
+		tanc_copia.position = $respawns/respawn13.position
 	elif respawn_n == 13:
-		tanc2_copia.position = $respawns/respawn14.position
-	add_child(tanc2_copia)
+		tanc_copia.position = $respawns/respawn14.position
+	add_child(tanc_copia)

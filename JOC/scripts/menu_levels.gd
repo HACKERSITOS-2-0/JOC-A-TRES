@@ -159,7 +159,76 @@ func _process(delta):
 		$VBoxContainer/levels/graella/nivells4/estrella1.visible = true
 		$VBoxContainer/levels/graella/nivells4/estrella2.visible = false
 		$VBoxContainer/levels/graella/nivells4/estrella3.visible = false
-
+		
+	var nivell5 = g_variables.nivell_5
+	if nivell5 == 100:
+		$VBoxContainer/levels/graella/nivells5/estrella1.visible = true
+		$VBoxContainer/levels/graella/nivells5/estrella2.visible = true
+		$VBoxContainer/levels/graella/nivells5/estrella3.visible = true
+	elif nivell5 > 60:
+		$VBoxContainer/levels/graella/nivells5/estrella1.visible = true
+		$VBoxContainer/levels/graella/nivells5/estrella2.visible = true
+		$VBoxContainer/levels/graella/nivells5/estrella3.visible = false
+	elif nivell5 > 5:
+		$VBoxContainer/levels/graella/nivells5/estrella1.visible = true
+		$VBoxContainer/levels/graella/nivells5/estrella2.visible = false
+		$VBoxContainer/levels/graella/nivells5/estrella3.visible = false
+		
+	var nivell6 = g_variables.nivell_6
+	if nivell6 == 100:
+		$VBoxContainer/levels/graella/nivells6/estrella1.visible = true
+		$VBoxContainer/levels/graella/nivells6/estrella2.visible = true
+		$VBoxContainer/levels/graella/nivells6/estrella3.visible = true
+	elif nivell6 > 60:
+		$VBoxContainer/levels/graella/nivells6/estrella1.visible = true
+		$VBoxContainer/levels/graella/nivells6/estrella2.visible = true
+		$VBoxContainer/levels/graella/nivells6/estrella3.visible = false
+	elif nivell6> 5:
+		$VBoxContainer/levels/graella/nivells6/estrella1.visible = true
+		$VBoxContainer/levels/graella/nivells6/estrella2.visible = false
+		$VBoxContainer/levels/graella/nivells6/estrella3.visible = false
+		
+	var nivell7 = g_variables.nivell_7
+	if nivell7 == 100:
+		$VBoxContainer/levels/graella/nivells7/estrella1.visible = true
+		$VBoxContainer/levels/graella/nivells7/estrella2.visible = true
+		$VBoxContainer/levels/graella/nivells7/estrella3.visible = true
+	elif nivell7 > 60:
+		$VBoxContainer/levels/graella/nivells7/estrella1.visible = true
+		$VBoxContainer/levels/graella/nivells7/estrella2.visible = true
+		$VBoxContainer/levels/graella/nivells7/estrella3.visible = false
+	elif nivell7 > 0:
+		$VBoxContainer/levels/graella/nivells7/estrella1.visible = true
+		$VBoxContainer/levels/graella/nivells7/estrella2.visible = false
+		$VBoxContainer/levels/graella/nivells7/estrella3.visible = false
+		
+	var nivell8 = g_variables.nivell_8
+	if nivell8 == 100:
+		$VBoxContainer/levels/graella/nivells8/estrella1.visible = true
+		$VBoxContainer/levels/graella/nivells8/estrella2.visible = true
+		$VBoxContainer/levels/graella/nivells8/estrella3.visible = true
+	elif nivell8 > 60:
+		$VBoxContainer/levels/graella/nivells8/estrella1.visible = true
+		$VBoxContainer/levels/graella/nivells8/estrella2.visible = true
+		$VBoxContainer/levels/graella/nivells8/estrella3.visible = false
+	elif nivell8 > 5:
+		$VBoxContainer/levels/graella/nivells8/estrella1.visible = true
+		$VBoxContainer/levels/graella/nivells8/estrella2.visible = false
+		$VBoxContainer/levels/graella/nivells8/estrella3.visible = false
+		
+	var nivell9 = g_variables.nivell_9
+	if nivell9 == 100:
+		$VBoxContainer/levels/graella/nivells9/estrella1.visible = true
+		$VBoxContainer/levels/graella/nivells9/estrella2.visible = true
+		$VBoxContainer/levels/graella/nivells9/estrella3.visible = true
+	elif nivell9 > 60:
+		$VBoxContainer/levels/graella/nivells9/estrella1.visible = true
+		$VBoxContainer/levels/graella/nivells9/estrella2.visible = true
+		$VBoxContainer/levels/graella/nivells9/estrella3.visible = false
+	elif nivell9 > 5:
+		$VBoxContainer/levels/graella/nivells9/estrella1.visible = true
+		$VBoxContainer/levels/graella/nivells9/estrella2.visible = false
+		$VBoxContainer/levels/graella/nivells9/estrella3.visible = false
 func _on_Back_pressed():
 	var player = AudioStreamPlayer.new()
 	self.add_child(player)
@@ -208,3 +277,35 @@ func _on_nivells5_pressed():
 	player.play()
 	yield(get_tree().create_timer(0.5), "timeout")
 	get_tree().change_scene("res://escenes/nivells/nivell 5.tscn")
+
+func _on_nivells6_pressed():
+	var player = AudioStreamPlayer.new()
+	self.add_child(player)
+	player.stream = load("res://Sons i músiques/Endavant.wav")
+	player.play()
+	yield(get_tree().create_timer(0.5), "timeout")
+	get_tree().change_scene("res://escenes/nivells/nivell 6.tscn")
+
+func _on_nivells7_pressed():
+	var player = AudioStreamPlayer.new()
+	self.add_child(player)
+	player.stream = load("res://Sons i músiques/Endavant.wav")
+	player.play()
+	yield(get_tree().create_timer(0.5), "timeout")
+	get_tree().change_scene("res://escenes/nivells/nivell 7.tscn")
+
+func _on_nivells8_pressed():
+	var player = AudioStreamPlayer.new()
+	self.add_child(player)
+	player.stream = load("res://Sons i músiques/Endavant.wav")
+	player.play()
+	yield(get_tree().create_timer(0.5), "timeout")
+	get_tree().change_scene("res://escenes/nivells/nivell 8.tscn")
+
+func _on_nivells9_pressed():
+	var player = AudioStreamPlayer.new()
+	self.add_child(player)
+	player.stream = load("res://Sons i músiques/Endavant.wav")
+	player.play()
+	yield(get_tree().create_timer(0.5), "timeout")
+	get_tree().change_scene("res://escenes/nivells/nivell 9.tscn")

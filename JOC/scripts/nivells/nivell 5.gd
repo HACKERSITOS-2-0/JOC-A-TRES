@@ -72,8 +72,7 @@ func _on_tempsentretancs_timeout():
 
 
 func _on_temps_de_nivell_timeout():
-	if g_variables.max_lvl <= 5:
-		g_variables.max_lvl = 6
+	g_variables.max_lvl = 6
 	g_variables.current_lvl = 6
 	g_variables.nivell_5 = $Personatge/Camera2D/CanvasLayer/marcador/barra_vida/HBoxContainer/TextureProgress.value
 	get_tree().change_scene("res://escenes/nivell_passat.tscn")

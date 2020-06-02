@@ -67,44 +67,54 @@ func canvia_nivell(current_level):
 	guarda_current_lvl(current_level)
 
 func canvia_max_lvl(nivell_max):
-	max_lvl = nivell_max
-	guarda_max_lvl(nivell_max)
+	if nivell_max > max_lvl:
+		max_lvl = nivell_max
+		guarda_max_lvl(nivell_max)
 
 func canvia_nivell_1(nivell1):
-	nivell_1 = nivell1
-	guarda_record_1(nivell1)
+	if nivell1 > nivell_1:
+		nivell_1 = nivell1
+		guarda_record_1(nivell1)
 
 func canvia_nivell_2(nivell2):
-	nivell_2 = nivell2
-	guarda_record_2(nivell2)
+	if nivell2 > nivell_2:
+		nivell_2 = nivell2
+		guarda_record_2(nivell2)
 
 func canvia_nivell_3(nivell3):
-	nivell_3 = nivell3
-	guarda_record_3(nivell3)
+	if nivell3 > nivell_3:
+		nivell_3 = nivell3
+		guarda_record_3(nivell3)
 
 func canvia_nivell_4(nivell4):
-	nivell_4 = nivell4
-	guarda_record_4(nivell4)
+	if nivell4 > nivell_4:
+		nivell_4 = nivell4
+		guarda_record_4(nivell4)
 	
 func canvia_nivell_5(nivell5):
-	nivell_5 = nivell5
-	guarda_record_5(nivell5)
+	if nivell5 > nivell_5:
+		nivell_5 = nivell5
+		guarda_record_5(nivell5)
 
 func canvia_nivell_6(nivell6):
-	nivell_6 = nivell6
-	guarda_record_6(nivell6)
+	if nivell6 > nivell_6:
+		nivell_6 = nivell6
+		guarda_record_6(nivell6)
 
 func canvia_nivell_7(nivell7):
-	nivell_7 = nivell7
-	guarda_record_7(nivell7)
+	if nivell7 > nivell_7:
+		nivell_7 = nivell7
+		guarda_record_7(nivell7)
 
 func canvia_nivell_8(nivell8):
-	nivell_8 = nivell8
-	guarda_record_8(nivell8)
+	if nivell8 > nivell_8:
+		nivell_8 = nivell8
+		guarda_record_8(nivell8)
 
 func canvia_nivell_9(nivell9):
-	nivell_9 = nivell9
-	guarda_record_9(nivell9)
+	if nivell9 > nivell_9:
+		nivell_9 = nivell9
+		guarda_record_9(nivell9)
 
 func carrega_current_lvl():
 	var f = File.new()

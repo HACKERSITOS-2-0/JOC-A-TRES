@@ -152,4 +152,8 @@ autoplay = true
 [connection signal="pressed" from="VBoxContainer/levels/graella/nivells3" to="." method="_on_nivells3_pressed"]
 [connection signal="pressed" from="VBoxContainer/levels/graella/nivells4" to="." method="_on_nivells4_pressed"]
 [connection signal="pressed" from="VBoxContainer/levels/graella/nivells5" to="." method="_on_nivells5_pressed"]
+[connection signal="pressed" from="VBoxContainer/levels/graella/nivells6" to="." method="_on_nivells6_pressed"]
+[connection signal="pressed" from="VBoxContainer/levels/graella/nivells7" to="." method="_on_nivells7_pressed"]
+[connection signal="pressed" from="VBoxContainer/levels/graella/nivells8" to="." method="_on_nivells8_pressed"]
+[connection signal="pressed" from="VBoxContainer/levels/graella/nivells9" to="." method="_on_nivells9_pressed"]
 [connection signal="pressed" from="VBoxContainer/MarginContainer2/Back" to="." method="_on_Back_pressed"]

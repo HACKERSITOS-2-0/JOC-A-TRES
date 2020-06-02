@@ -3,7 +3,7 @@
 [ext_resource path="res://mapa/obstacles.tres" type="TileSet" id=1]
 [ext_resource path="res://imatges/mapa/terrainTiles_retina.png" type="Texture" id=2]
 [ext_resource path="res://escenes/Personatge.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scripts/nivells/nivell 5.gd" type="Script" id=4]
+[ext_resource path="res://scripts/nivells/nivell 7.gd" type="Script" id=4]
 [ext_resource path="res://escenes/obstacle.tscn" type="PackedScene" id=5]
 [ext_resource path="res://escenes/respawns.tscn" type="PackedScene" id=6]
 [ext_resource path="res://escenes/nivells/Límits Mapa.tscn" type="PackedScene" id=7]
@@ -12,7 +12,7 @@
 [ext_resource path="res://escenes/powerup1.tscn" type="PackedScene" id=10]
 [ext_resource path="res://escenes/powerup3.tscn" type="PackedScene" id=11]
 [ext_resource path="res://escenes/powerup2.tscn" type="PackedScene" id=12]
-[ext_resource path="res://escenes/enemics/tanc3.tscn" type="PackedScene" id=13]
+[ext_resource path="res://escenes/tanc.tscn" type="PackedScene" id=13]
 
 [sub_resource type="TileSet" id=1]
 0/name = "terrainTiles_retina.png 0"
@@ -47,7 +47,7 @@
 [sub_resource type="CircleShape2D" id=2]
 radius = 23.5374
 
-[node name="nivell 5" type="Node"]
+[node name="nivell 7" type="Node"]
 script = ExtResource( 4 )
 tancs = ExtResource( 13 )
 tancs2 = ExtResource( 8 )
@@ -241,11 +241,11 @@ wait_time = 45.0
 autostart = true
 
 [node name="tempsentretancs" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 6.0
 autostart = true
 
 [node name="tempsentretancs2" type="Timer" parent="."]
-wait_time = 10.0
+wait_time = 14.0
 autostart = true
 [connection signal="timeout" from="temps_de_nivell" to="." method="_on_temps_de_nivell_timeout"]
 [connection signal="timeout" from="powerup1" to="." method="_on_powerup1_timeout"]

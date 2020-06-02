@@ -9,7 +9,7 @@ height = 20.5111
 
 [node name="area_bala_4" type="Area2D"]
 scale = Vector2( 0.4, 0.4 )
-collision_layer = 128
+collision_layer = 64
 collision_mask = 17
 script = ExtResource( 1 )
 vel_bales = 120
