@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Bala4.wav-adb5eb140dc8e817abdbd9d8be98317b.sample"
+
+[deps]
+
+source_file="res://Sons i músiques/Bala4.wav"
+dest_files=[ "res://.import/Bala4.wav-adb5eb140dc8e817abdbd9d8be98317b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

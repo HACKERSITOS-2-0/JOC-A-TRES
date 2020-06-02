@@ -104,6 +104,7 @@ autostart = true
 
 [node name="tema_nivells" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
+autoplay = true
 
 [node name="obstacles grans" type="Node" parent="."]
 
