@@ -3,6 +3,7 @@ var moviment_x = 0
 var moviment_y = 0
 export var velocitat=100
 var en_moviment:bool = false
+var p_disparar:bool = false
 export var bales:int = 20 setget set_bales
 
 var powerup1 : bool = false setget activabar1
@@ -40,7 +41,6 @@ func activabar3(boolean):
 		$"Camera2D/CanvasLayer/MarginContainer2/temps super".visible = true
 		$countdown.start()
 func _ready():
-	
 	$Camera2D/CanvasLayer/MarginContainer/HBoxContainer/MarginContainer/Label.text = str(bales)
 
 func _process(delta):
@@ -105,7 +105,7 @@ func _on_area_personatge_area_entered(area):
 		$shield.visible = true
 	
 func dispara():
-	if bales > 0:
+	if bales > 0 and abs(get_global_mouse_position().x-global_position.x) > 15 and abs(get_global_mouse_position().y-global_position.y) > 15 :
 		var balas = bala_personatge.instance()
 		balas.position = $"boquilla pistola".global_position 
 		get_parent().add_child(balas)
@@ -117,6 +117,7 @@ func dispara():
 		if not powerup1:
 			 bales -= 1
 		actualitza_m(bales)
+		$p_disparar.start()
 
 func set_bales(n_bales):
 	bales = n_bales
@@ -136,3 +137,7 @@ func actualitza_m(bales):
 
 func _on_countdown_timeout():
 	$"Camera2D/CanvasLayer/MarginContainer2/temps super".value -= 1
+
+
+func _on_p_disparar_timeout():
+	p_disparar = true

@@ -32,7 +32,20 @@ func _on_Continue_pressed():
 		get_tree().change_scene("res://escenes/nivells/nivell 1.tscn")
 	elif g_variables.current_lvl == 2:
 		get_tree().change_scene("res://escenes/nivells/nivell 2.tscn")
-
+	elif g_variables.current_lvl == 3:
+		get_tree().change_scene("res://escenes/nivells/nivell 3.tscn")
+	elif g_variables.current_lvl == 4:
+		get_tree().change_scene("res://escenes/nivells/nivell 4.tscn")
+	elif g_variables.current_lvl == 5:
+		get_tree().change_scene("res://escenes/nivells/nivell 5.tscn")
+	elif g_variables.current_lvl == 6:
+		get_tree().change_scene("res://escenes/nivells/nivell 6.tscn")
+	elif g_variables.current_lvl == 7:
+		get_tree().change_scene("res://escenes/nivells/nivell 7.tscn")
+	elif g_variables.current_lvl == 8:
+		get_tree().change_scene("res://escenes/nivells/nivell 8.tscn")
+	elif g_variables.current_lvl == 9:
+		get_tree().change_scene("res://escenes/nivells/nivell 9.tscn")
 
 func _on_Controls_pressed():
 	var player = AudioStreamPlayer.new()

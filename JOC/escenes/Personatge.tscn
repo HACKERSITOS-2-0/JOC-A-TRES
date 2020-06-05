@@ -61,7 +61,7 @@ rotation = -1.5708
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 2 )
 animation = "camina"
-frame = 1
+frame = 3
 playing = true
 
 [node name="collision" type="CollisionShape2D" parent="."]
@@ -109,7 +109,9 @@ texture_under = ExtResource( 16 )
 texture_progress = ExtResource( 15 )
 
 [node name="boquilla pistola" type="Position2D" parent="."]
-position = Vector2( 27.7421, -12.6499 )
+position = Vector2( 28.2666, -11.9506 )
+
+[node name="direccio" type="Position2D" parent="."]
 
 [node name="caixes detector" type="Area2D" parent="."]
 space_override = 1
