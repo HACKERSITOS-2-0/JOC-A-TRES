@@ -81,8 +81,8 @@ margin_bottom = 251.0
 [node name="Continue" type="Button" parent="CanvasLayer/MarginContainer/VBoxContainer/VBoxContainer"]
 margin_right = 824.0
 margin_bottom = 44.0
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.447059, 0.498039, 1, 1 )
+custom_fonts/font = SubResource( 2 )
 text = "continue"
 flat = true
 
@@ -91,8 +91,8 @@ margin_top = 48.0
 margin_right = 824.0
 margin_bottom = 92.0
 size_flags_horizontal = 5
-custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.447059, 0.498039, 1, 1 )
+custom_fonts/font = SubResource( 3 )
 text = "LEVELS"
 flat = true
 
@@ -100,8 +100,8 @@ flat = true
 margin_top = 96.0
 margin_right = 824.0
 margin_bottom = 140.0
-custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.447059, 0.498039, 1, 1 )
+custom_fonts/font = SubResource( 2 )
 text = "controls"
 flat = true
 
@@ -109,8 +109,8 @@ flat = true
 margin_top = 144.0
 margin_right = 824.0
 margin_bottom = 188.0
-custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.447059, 0.498039, 1, 1 )
+custom_fonts/font = SubResource( 4 )
 text = "quit"
 flat = true
 
@@ -137,6 +137,7 @@ align = 1
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 6 )
 autoplay = true
+
 [connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/VBoxContainer/Continue" to="." method="_on_Continue_pressed"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/VBoxContainer/Levels" to="." method="_on_Levels_pressed"]
 [connection signal="pressed" from="CanvasLayer/MarginContainer/VBoxContainer/VBoxContainer/Controls" to="." method="_on_Controls_pressed"]

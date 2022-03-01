@@ -61,7 +61,6 @@ rotation = -1.5708
 scale = Vector2( 0.05, 0.05 )
 frames = SubResource( 2 )
 animation = "camina"
-frame = 3
 playing = true
 
 [node name="collision" type="CollisionShape2D" parent="."]
@@ -114,9 +113,9 @@ position = Vector2( 28.2666, -11.9506 )
 [node name="direccio" type="Position2D" parent="."]
 
 [node name="caixes detector" type="Area2D" parent="."]
-space_override = 1
 collision_layer = 128
 collision_mask = 128
+space_override = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="caixes detector"]
 position = Vector2( 0.540363, 0.540359 )
@@ -130,6 +129,7 @@ script = ExtResource( 14 )
 
 [node name="countdown" type="Timer" parent="."]
 autostart = true
+
 [connection signal="area_entered" from="area_personatge" to="." method="_on_area_personatge_area_entered"]
 [connection signal="area_entered" from="caixes detector" to="." method="_on_caixes_detector_area_entered"]
 [connection signal="timeout" from="countdown" to="." method="_on_countdown_timeout"]

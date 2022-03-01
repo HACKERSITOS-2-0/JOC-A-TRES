@@ -25,6 +25,7 @@ func activabar1(boolean):
 		$"Camera2D/CanvasLayer/MarginContainer2/temps super".value = 5
 		$"Camera2D/CanvasLayer/MarginContainer2/temps super".max_value = 5
 		$countdown.start()
+		
 func activabar2(boolean):
 	powerup2 = boolean
 	if boolean:
@@ -117,7 +118,7 @@ func dispara():
 		if not powerup1:
 			 bales -= 1
 		actualitza_m(bales)
-		$p_disparar.start()
+		$countdown.start()
 
 func set_bales(n_bales):
 	bales = n_bales

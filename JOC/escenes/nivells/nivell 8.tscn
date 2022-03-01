@@ -389,6 +389,7 @@ wait_time = 10.0
 
 [node name="powerup3" type="Timer" parent="."]
 wait_time = 10.0
+
 [connection signal="timeout" from="temps_de_nivell" to="." method="_on_temps_de_nivell_timeout"]
 [connection signal="timeout" from="tempsentretancs" to="." method="_on_tempsentretancs_timeout"]
 [connection signal="timeout" from="tempsentretancs2" to="." method="_on_tempsentretancs2_timeout"]
